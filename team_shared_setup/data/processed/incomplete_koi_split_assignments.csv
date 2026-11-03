@@ -1,0 +1,364 @@
+kepoi_name,kepid,koi_disposition,koi_fittype,partition,dev_fold,primary_supervised_row,excluded_from_primary_experiment,permanently_discarded,purpose
+K01046.01,6209637,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01109.01,3235672,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K01198.04,3447722,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K01134.02,8414907,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K01136.01,8386035,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K01010.01,1027438,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K01149.01,8349405,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01019.01,8179973,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K01316.02,10794087,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K01372.01,6880531,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K01445.03,11336883,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K01219.01,3440861,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01229.01,6432059,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01356.01,7363829,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K00154.01,9970525,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K01739.01,7199906,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K01677.02,5526717,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K01686.01,6149553,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K01922.02,9411166,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K01927.01,7219761,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01940.02,10005788,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K02339.02,7033233,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K02311.01,4247991,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K02311.02,4247991,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K02160.02,5546761,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K02323.01,8872048,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K02410.01,8676038,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K02410.02,8676038,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K02640.01,9088780,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K00245.04,8478994,CONFIRMED,none,development,3,False,True,False,later_sensitivity_experiment
+K03035.01,6388770,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K00539.01,11246364,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K00595.01,10294465,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K00445.01,4384675,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K00005.02,8554498,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06048.02,8019043,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K04073.01,10419797,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K00142.02,5446285,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K02360.02,7515670,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K04134.01,6119877,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K04229.01,11616596,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K04369.01,9011874,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K04396.01,11296045,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04396.02,11296045,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04396.03,11296045,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04616.01,9180566,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K01132.02,8330548,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04883.01,6802536,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K04889.01,6852354,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K01042.02,5816811,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K03376.02,3098843,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K01747.02,7032421,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K03610.02,7212066,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K03628.01,3542574,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K07730.01,5512513,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01545.02,5282049,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K00302.02,3662838,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K03827.02,5114623,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K03691.02,4751083,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K03773.01,10268903,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K03716.01,8719324,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K03641.02,3534118,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K03644.02,12216706,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K03722.01,8365739,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K03729.02,9674592,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01312.02,10963242,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K01408.02,9150827,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K02326.01,3962751,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K02334.01,5110683,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K02394.01,10336927,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K00439.02,12470954,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K02502.01,10880007,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K02515.01,8418129,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K01926.01,10230571,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K02843.01,8176019,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K02176.01,8501062,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K00065.01,10223615,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K00383.01,3342463,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K00860.01,6680177,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K00562.01,6681233,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K00364.01,7296438,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K00879.01,7351237,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K00885.01,7436215,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K00594.01,10216045,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K00962.01,8846163,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K00973.01,12366681,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K01026.01,1996399,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K01027.01,2697169,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K00111.04,6678383,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K01617.01,6387969,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K03118.01,10861608,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K03139.01,5640511,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K03143.01,7336093,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K03149.01,10196493,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K02902.01,10601465,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K00966.02,3233043,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K02473.02,8753896,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K02533.02,11074835,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K02570.02,10812504,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K02631.02,7584650,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K02940.01,9823564,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K02988.01,1725415,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K03046.01,8161830,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K03076.01,11551715,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K03079.01,6312171,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K03080.01,10665043,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05154.01,5370944,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05031.01,3970397,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05035.01,4063943,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05159.01,5397106,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05160.01,5425643,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05161.01,5425908,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05166.01,5440435,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05292.01,6522124,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05295.01,6526377,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05051.01,4246343,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05177.01,5547424,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K04932.01,2158460,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K05056.01,4281700,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05309.01,6635813,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05062.01,4459503,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05074.01,4647949,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05194.01,5709014,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05197.01,5779606,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K04952.01,2710101,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K04955.01,2836076,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K04956.01,2850321,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K04957.01,2861126,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05080.01,4740375,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K04960.01,2992634,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05210.01,5942112,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05342.01,7011044,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K04969.01,3242039,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K04979.01,3428359,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05103.01,4917658,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05112.01,5006817,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04993.01,3554819,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04995.01,3632330,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K04996.01,3641216,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05118.01,5032842,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05000.01,3646515,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05006.01,3757521,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K05008.01,3763724,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05136.01,5192660,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05137.01,5193813,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05140.01,5213005,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05143.01,5260419,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05264.01,6346894,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K05266.01,6347890,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05270.01,6363560,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05022.01,3865815,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05400.01,7581535,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05402.01,7598326,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05404.01,7618231,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05405.01,7619667,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05533.01,8525286,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05656.01,9330740,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K05781.01,10266852,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05783.01,10292000,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05785.01,10319834,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05537.01,8547366,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05668.01,9402859,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05795.01,10459749,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05422.01,7757620,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05549.01,8612291,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05670.01,9412267,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05673.01,9449320,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05803.01,10548411,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05424.01,7762717,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05425.01,7767781,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05428.01,7804128,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05429.01,7809049,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05807.01,10554421,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05808.01,10556891,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05809.01,10579570,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05811.01,10591578,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05431.01,7812990,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05432.01,7819520,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05437.01,7881464,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05561.01,8682751,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05697.01,9594992,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05813.01,10616317,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05447.01,7935997,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05450.01,7948619,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05576.01,8836224,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05701.01,9645188,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05820.01,10677763,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05821.01,10678912,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05824.01,10734441,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05709.01,9758615,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05710.01,9771920,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05716.01,9837659,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05836.01,10865043,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05837.01,10878117,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K05843.01,10958972,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05467.01,8040308,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K05349.01,7038988,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05350.01,7041972,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05599.01,9016592,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05352.01,7101726,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K05356.01,7123580,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05734.01,9933600,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05362.01,7174911,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05363.01,7176424,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05364.01,7184556,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05367.01,7191523,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05494.01,8244947,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05619.01,9117123,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05620.01,9118858,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05368.01,7192680,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05374.01,7207081,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05496.01,8265239,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05751.01,10004515,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05756.01,10018364,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05377.01,7256460,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K05383.01,7375100,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05504.01,8313697,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K05634.01,9178502,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K05637.01,9181402,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05759.01,10064591,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05644.01,9224514,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05645.01,9229807,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05397.01,7539174,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K05905.01,11493378,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05916.01,11600299,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05926.01,11652427,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K05928.01,11674709,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05931.01,11773174,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K05935.01,11818566,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05936.01,11819396,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K05946.01,11966643,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05951.01,12066767,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K05955.01,12110901,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05966.01,12350136,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K05857.01,11046723,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K05975.01,12645262,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05977.01,12690465,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K05872.01,11145637,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K05880.01,11199233,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K05882.01,11298442,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K06180.01,8494783,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K03504.02,5471158,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K04568.02,10407086,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K06097.01,2852810,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04030.02,9551430,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06099.02,3003991,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06106.01,3965879,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06197.01,9289960,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06202.01,9389245,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K06203.01,9394605,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K00651.02,5796186,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K06115.01,4464394,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06210.01,9727765,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K04396.04,11296045,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K00736.03,10340423,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06127.01,5306984,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K06216.01,10198662,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06216.02,10198662,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06224.01,10414727,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K00099.02,8505215,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06136.01,5814635,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06142.01,6116172,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K06142.03,6116172,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K06237.02,11296437,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06238.01,11341164,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K06239.02,11462969,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06148.01,6593968,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06242.01,11656928,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06242.02,11656928,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06150.01,6946681,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K06154.01,7119080,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06249.01,12207117,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06158.02,7198881,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06164.02,7835312,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K02432.02,7047363,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K06170.01,8058507,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K01541.02,4840513,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06176.02,8223568,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K00129.02,11974540,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K03180.01,3936658,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K03233.01,2142501,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K03283.01,9008103,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K06759.01,6697976,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06886.01,7541746,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K04716.02,11290515,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K06768.01,6781047,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07168.01,9394920,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07298.01,10257903,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K06378.01,4042088,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06503.02,5036530,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06505.01,5038469,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K06507.01,5042785,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06910.01,7733540,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K07175.01,9466042,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06516.02,5092799,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K06656.01,6048255,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06660.01,6066107,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07190.01,9541567,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K07324.01,10417704,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K06402.01,4284147,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06528.01,5125048,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06529.01,5126627,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06530.01,5130890,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06927.01,7871395,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K07060.01,8565900,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07194.01,9581498,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06542.01,5215508,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K06946.01,7976435,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K07080.01,8713828,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07474.01,11709022,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06298.01,2969638,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06430.01,4587448,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06437.01,4725292,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06560.01,5301955,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06697.01,6368222,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K06698.01,6372268,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06835.01,7135549,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06965.01,8098515,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07094.01,8815279,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K07226.01,9726452,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07111.01,8953278,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K07240.01,9852050,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07368.01,10736489,CONFIRMED,none,development,0,False,True,False,later_sensitivity_experiment
+K06850.01,7280953,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K06855.01,7281410,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07250.01,9906802,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K07255.01,9932197,CANDIDATE,none,development,1,False,True,False,later_sensitivity_experiment
+K02918.02,7008149,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06340.01,3544678,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K06341.01,3545626,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K06598.01,5552808,CANDIDATE,none,development,3,False,True,False,later_sensitivity_experiment
+K07263.01,9958053,FALSE POSITIVE,none,development,2,False,True,False,later_sensitivity_experiment
+K07395.01,10982373,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K07528.01,12365015,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06485.01,5000179,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06744.01,6610433,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K06876.01,7421876,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K03716.02,8719324,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06489.01,5021432,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K06610.01,5633259,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment
+K06747.01,6629156,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K06884.01,7537660,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K04298.02,2852941,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07604.01,9595956,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07607.01,10079420,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K07608.01,10253638,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07620.01,12304202,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K06143.02,6182093,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07551.01,4662363,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07561.01,5696518,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07562.01,5878506,CANDIDATE,none,development,0,False,True,False,later_sensitivity_experiment
+K07566.01,6385302,FALSE POSITIVE,none,development,3,False,True,False,later_sensitivity_experiment
+K07569.01,6527050,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K07582.01,7186259,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07596.01,8682094,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K07600.01,9092897,FALSE POSITIVE,none,development,1,False,True,False,later_sensitivity_experiment
+K08011.01,10407191,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K08013.01,10462462,FALSE POSITIVE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07928.01,9142714,CANDIDATE,none,development,2,False,True,False,later_sensitivity_experiment
+K08157.01,8527297,CANDIDATE,none,test,-1,False,True,False,later_sensitivity_experiment
+K07946.01,9588880,FALSE POSITIVE,none,development,0,False,True,False,later_sensitivity_experiment
+K08179.01,9216810,FALSE POSITIVE,none,development,4,False,True,False,later_sensitivity_experiment
+K07973.01,9899345,CANDIDATE,none,development,4,False,True,False,later_sensitivity_experiment

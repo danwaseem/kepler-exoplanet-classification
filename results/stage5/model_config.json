@@ -1,0 +1,45 @@
+{
+  "test_scored": false,
+  "models_changed": false,
+  "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+  "random_seed": 245,
+  "n_repeats": 10,
+  "scoring": "macro-F1",
+  "tree_hyperparameters": {
+    "criterion": "gini",
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "ccp_alpha": 0.0011107571059714625,
+    "class_weight": null,
+    "random_state": 245,
+    "imputer": "median"
+  },
+  "forest_hyperparameters": {
+    "n_estimators": 100,
+    "criterion": "gini",
+    "max_depth": 20,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2,
+    "min_samples_split": 2,
+    "class_weight": "balanced",
+    "bootstrap": true,
+    "random_state": 245,
+    "imputer": "median"
+  },
+  "stability_rule": {
+    "minimum_mean_pairwise_spearman": 0.8,
+    "top_n": 10,
+    "worst_rank_at_most": 15,
+    "minimum_features_meeting_rank": 8
+  },
+  "centroid_rule": {
+    "top_n": 10,
+    "minimum_count": 5,
+    "minimum_positive_share": 0.5
+  },
+  "forest_centroid_dominates": false,
+  "tree_centroid_dominates": false,
+  "forest_permutation_stable": false,
+  "tree_permutation_stable": false
+}

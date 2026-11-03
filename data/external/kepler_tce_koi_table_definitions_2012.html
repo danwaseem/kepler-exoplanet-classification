@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Threshold-Crossing-Event and Kepler-Object-of-Interest table definitions</title>
+        <script type="text/javascript" src="/js/local/util.js"></script>
+        <script src="/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/fixed.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="/css/docs.css" />
+</head>
+
+<body>
+        <div class="bbox">
+        <div class="b2box">
+
+<!-- begin drop down menu banner -->
+<!-- START EXO_BANNER.HTML -->
+<link rel="stylesheet" type="text/css" href="/css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="/css/menu_icons.css" />
+
+<script type="text/javascript" src="/js/navigation.js"></script>
+
+<div id="banner">
+ <a href="/index.html"><img src="/images/nsted_banner.jpg" alt="Exoplanet Archive banner" /></a>
+</div> <!-- end banner -->
+
+<!-- begin navigation.html -->
+<nav id="exo-hrmenu" class="exo-hrmenu" aria-label="Primary">
+   <ul role="list">
+      <li>
+         <a href="/index.html">Home</a>
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-about" href="/docs/about.html">About Us</button>
+         <div class="exo-hrsub" id="exo-hrsub-about">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/intro.html">
+                         <i class="exoplanet-icon-book-borderless"></i>
+                         Overview</a></li>
+                     <li><a href="/docs/holdings.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Holdings</a></li>
+                     <li><a href="/docs/counts_detail.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Exoplanet Counts</a></li>
+                     <li><a href="/docs/users_group.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         User Panel</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/faq.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         FAQ</a></li>
+                     <li><a href="/docs/acknowledge.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Acknowledgements</a></li>
+                     <li><a href="/docs/privacy.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Privacy Notice</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-data" href="/docs/data.html">Data</button>
+         <div class="exo-hrsub" id="exo-hrsub-data">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <h4>Planetary Systems</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PSCompPars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Planetary Systems Composite Data</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=STELLARHOSTS">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Stellar Hosts</a></li>
+                     <li><a href="/cgi-bin/atmospheres/nph-firefly?atmospheres">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Atmospheric Spectroscopy</a></li>
+                    <li><a href="/cgi-bin/observations/nph-firefly?data">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         NExoList </a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=ML">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Microlensing Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=directimaging&constraint=immodeldef=1">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Direct Imaging Planets</a></li>
+                    <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TD">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Transiting Planets</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Kepler</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (Cumulative List)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koi">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KOI (All Lists)</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koiapp&constraint=pp_host_prob_score>0.3">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Positional Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=koifpp">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         False Positive Probabilities</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=fpwg">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                        Certified False Positives</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=tce">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Threshold-Crossing Events</a></li>
+                     <li><a href="/docs/Kepler_completeness_reliability.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Completeness and Reliability</a></li>
+                     <li><a href="/docs/KeplerSimulated.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Simulated Data</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=keplerstellar">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Kepler Stellar</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=kep_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Kepler Confirmed Names</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Transit Surveys</h4>
+                  <ul role="list">
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=TOI">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TESS Project Candidates</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=k2targets">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         K2 Targets</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2pandc">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Planets and Candidates</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=k2_conf_names">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         K2 Confirmed Names</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_astero_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRot Astero-Seismology</a></li>
+                     <li><a href="/applications/ETSS/CoRoT_exo_index.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         CoRoT Exoplanet</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=superwasptimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         SuperWASP Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=kelttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         KELT Light Curves</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/KELTP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         KELT Praesepe</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/XO">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         XO</a></li>
+                     <li><a href="/applications/ETSS/HATNet_index.html">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HATNet</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/Cluster">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Cluster</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ETSSView&config=conf/TrES">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         TrES</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <h4>Other</h4>
+                  <ul role="list">
+                      <li><a href="/cgi-bin/observations/nph-firefly?datta">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         JWST Observations</a></li>
+                     <li><a href="/cgi-bin/TblSearch/nph-tblSearchInit?app=ExoTbls&config=ukirttimeseries">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         UKIRT Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/MOA/nph-firefly?MOA">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         MOA Microlensing Survey</a></li>
+                    <li><a href="/cgi-bin/ROME/nph-firefly?data&filter=True">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         ROME/REA Microlensing Survey</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=gjstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Gliese-Jahreiss Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=DI_STARS_EXEP">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         HWO ExEP Precursor Science Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=missionstars">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars</a></li>
+                     <li><a href="/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=mission_exocat">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Mission Stars+ExoCat</a></li>
+                     <li><a href="/cgi-bin/FDL/nph-fdl">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         Frontier Development Lab Datasets</a></li>
+                     <li><a href="/cgi-bin/CUBESAT/nph-cubesat?cute">
+                         <i class="exoplanet-icon-table-borderless"></i>&nbsp;
+                         CUTE Mission</a></li>
+                     <li><a href="/docs/ASTERIAMission.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ASTERIA Mission</a></li>
+                     <li><a href="/docs/contributed_data.html">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         Contributed Data Sets</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Tables Search and File Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+            &nbsp;<p/><center><i class="exoplanet-icon-table-borderless"></i>&nbsp;&nbsp; <i>Full table display</i>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="exoplanet-icon-search-borderless"></i>&nbsp;&nbsp;<i>Database search</i></center><p/>
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-tools" href="/docs/tools.html">Tools</button>
+         <div class="exo-hrsub" id="exo-hrsub-tools">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/Inventory/search.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Explore the Archive</a></li>
+                     <li><a href="/applications/ExoTbls/upload.html">
+                         <i class="exoplanet-icon-search-borderless"></i>&nbsp;
+                         Interactive Table Search and File Upload</a></li>
+                     <li><a href="/cgi-bin/TransitView/nph-visibletbls?dataset=transits">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Transit and Ephemeris Service</a></li>
+                     <li><a href="/cgi-bin/CalcQty/nph-calcqty">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         Predicted Observables for Exoplanets (POE)</a></li>
+                     <li><a href="/cgi-bin/Pgram/nph-pgram">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Periodogram</a></li>
+                     <li><a href="/ScatterPlot/?config=scatter&table=PS_output.csv&columns=PS_columns.tbl&theme=pres&x=pl_orbper&y=pl_bmassj&symbol-color=discoverymethod&symbol-size-min=8&legendpos=bottomright&link=1">
+                         <i class="exoplanet-icon-plot-simple-borderless"></i>&nbsp;
+                         Confirmed Planets Plotting Tool</a></li>
+                     <li><a href="/cgi-bin/ExoFAST/nph-exofast">
+                         <i class="exoplanet-icon-transit-borderless"></i>&nbsp;
+                         EXOFAST: Transit and RV Fitting</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="https://astrofetch.ipac.caltech.edu" target="_blank">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         AstroFetch AI</a></li>
+                     <li><a href="/docs/TAP/usingTAP.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                        Table Access Protocol (TAP) Interface</a></li>
+                     <li><a href="/docs/program_interfaces.html">
+                         <i class="exoplanet-icon-api-search-borderless"></i>&nbsp;
+                         Application Programming Interface (API)</a></li>
+                     <li><a href="/bulk_data_download">
+                         <i class="exoplanet-icon-download-borderless"></i>&nbsp;
+                         Bulk Data Download</a></li>
+                     <li><a href="https://exofop.ipac.caltech.edu/">
+                         <i class="exoplanet-icon-observatory-borderless"></i>&nbsp;
+                         ExoFOP</a></li>
+                     <li><a href="/exoplanetplots/">
+                         <i class="exoplanet-icon-plot-borderless"></i>&nbsp;
+                         Pre-generated Plots</a></li>
+                    <li><a href="/support/upload_param/">
+                         <i class="exoplanet-icon-upload-borderless"></i>&nbsp;
+                         Published Data Upload</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" class="exo-hrtrigger" aria-haspopup="true" aria-expanded="false" aria-controls="exo-hrsub-support" href="/docs/help.html">Support</button>
+         <div class="exo-hrsub" id="exo-hrsub-support">
+            <div class="exo-hrsub-inner">
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/applications/DocSet/index.html?doctree=/docs/docmenu.xml&startdoc=item_1_01">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Documentation Index</a></li>
+                     <li><a href="/docs/KeplerMission.html">
+                         <i class="exoplanet-icon-book-borderless"></i>&nbsp;
+                         Kepler Documentation</a></li>
+                  </ul>
+               </div>
+               <div class="exo-hrsub-group">
+                  <ul role="list">
+                     <li><a href="/docs/connect.html">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Social Media and Newsletter</a></li>
+                     <li><a href="/applications/Helpdesk" target="_blank">
+                         <i class="exoplanet-icon-discussion-borderless"></i>&nbsp;
+                         Contact Us</a></li>
+                  </ul>
+               </div>
+            </div><!-- /exo-hrsub-inner -->
+         </div><!-- /exo-hrsub -->
+      </li>
+      <li>
+         <button type="button" id="loginID" aria-live="polite" style="appearance: none; background: none; border: 0; color: inherit; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; padding: 3px 1.5em;">-</button>
+      </li>
+  </ul>
+</nav>
+<!-- end navigation.html -->
+
+<!-- END EXO_BANNER.HTML -->
+
+<!-- end drop down menu banner -->
+<div class="docs">
+
+<div>
+
+<center>
+<h1>THRESHOLD-CROSSING-EVENT AND KEPLER-OBJECT-OF-INTEREST TABLE DEFINITIONS</h1>
+<br />Version: <i>1.0</i><br />
+Delivered by the Kepler Project on <i>Dec 7, 2012</i>
+</center>
+<br />
+
+<h2>CONTENT</h2>
+<ol>
+  <li><a href="#targets">TARGET LABELS AND FLAGS</a>
+  <li><a href="#transits">TRANSIT FIT PARAMETERS</a>
+  <li><a href="#planets">SCALED PLANETARY PARAMETERS</a>
+  <li><a href="#stars">STELLAR PARAMETERS</a>
+  <li><a href="#lcstats">LIGHT CURVE-BASED KOI VETTING STATISTICS</a>
+  <li><a href="#pixelstats">PIXEL-BASED KOI VETTING STATISTICS</a>
+</ol>
+
+<hr>
+<a name="targets"></a><b><h2>1 TARGET LABELS AND FLAGS</h2></b>
+FWdKICA
+<b>KOI Number</b><br>
+A number used to identify and track a Kepler Object of Interest
+(KOI). A KOI is a target identified by the Kepler Project that
+displays at least one transit-like sequence within Kepler time-series
+photometry that appears to be of astrophysical origin and initially
+consistent with a planetary transit hypothesis. There can be multiple KOI numbers for a single stellar target. A KOI number has an
+integer and a decimal part (e.g., KOI 701.04). The integer part
+designates the target star. The two-digit decimal part identifies a
+unique transiting object associated with that star. In the example
+above, the "04" refers to the fourth planetary candidate identified in
+the KOI 701 system. Note that KOI 701.04 is not necessarily the fourth planetary
+candidate listed within a DV report, or the fourth furthest
+planet from the host star. <p>
+
+<a name="kepid"></a>
+<b>KepID</b><br>
+Target identification number, as listed in the <a href="https://ui.adsabs.harvard.edu/abs/2011AJ....142..112B/abstract" target="_blank">Kepler Input Catalog (KIC)</a>. The KIC was derived from a ground-based imaging survey of the Kepler field conducted prior to launch. The survey's purpose was to identify stars for the Kepler exoplanet survey by magnitude and color. The full catalog of 13 million sources can be searched at the <a href="https://archive.stsci.edu/kepler/kic10/search.php" target="_blank">MAST  archive</a>. The subset of 4 million targets found upon the Kepler CCDs can be searched via the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php" target="_blank">Kepler Target Search form</a>. The Kepler ID is unique to a target and there is only one Kepler ID per target. <p>
+
+<b>Disposition</b><br>
+A flag which designates the most probable physical explanation of the KOI. Typical values are "PC" (a planetary candidate) or  "FP" (a false positive). If this field is empty then the disposition tests for this KOI have not yet been completed. The value of this flag may change over time as the evaluation of KOIs proceeds to deeper levels of analysis using Kepler time-series pixel and light curve data, or follow-up observations. A false positive has failed at least one of the tests described in <a href="https://ui.adsabs.harvard.edu/abs/2013ApJS..204...24B/abstract" target="_blank">Batalha et al. (2012)</a>. A planetary candidate has passed all prior tests conducted to identify false positives, although this does not a priori mean that all possible tests have been conducted. A future test may confirm this KOI as a false positive. False positives can occur when i) the KOI is in reality an eclipsing binary star, ii) the Kepler light curve is contaminated by a background eclipsing binary, iii) stellar variability is confused for coherent planetary transits, or iv) instrumental artifacts are confused for coherent planetary transits.<p>
+
+<b>Number of Planets</b><br>
+Number of planet candidates identified in a system.<p>
+
+<strong>Quarters</strong><br />
+A bit string indicating which quarters of Kepler data were searched for transit signatures. Reading from left to right, the bits indicate the quarters. A value of one for any bit means that the designated quarter was searched for transits, a value of zero means that quarter was not included in the transit search. <p>
+
+<hr>
+<a name="transits"></a><b><h2>2. TRANSIT FIT PARAMETERS</h2></b>
+
+<i>Transit parameters delivered by the Kepler Project are typically best-fit parameters produced by a <a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...580L.171M/abstract" target="_blank">Mandel-Agol (2002)</a> fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris. Some of the parameters listed below are fit directly, other are derived from the best-fit parameters. Limb darkening coefficients are fixed and pre-calculated from host star properties. <a href="
+#period">Orbital Period</a>, <a href="#BJD0">Transit Epoch</a>, <a href="#RpRstar">Planet-Star Radius Ratio</a>, <a href="#aRstar">Planet-Star Separation</a> and <a href="#b">Impact Parameter</a> are the free parameters in the fit. Matrix covariances are adopted as errors to the fit parameters, they therefore ignore the effects of correlation between the fit parameters and are likely to be under-estimates.</i><p>
+
+<a name="period"></a>
+<b>Orbital Period</b><br>
+<i>units: days</i><br>
+The interval between consecutive planetary transits. <p>
+
+<a name="BJD0"></a>
+<b>Transit Epoch</b></br>
+<i>units: BJD - 2,545,833.0</i><br>
+The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD) minus a constant offset of 2,454,833.0 days. The offset corresponds to 12:00 on Jan 1, 2009 UTC. <p>
+
+<a name="RpRstar"></a>
+<b>Planet-Star Radius Ratio</b></br>
+<i>units: dimensionless</i><br>
+The planet radius divided by the stellar radius. <p>
+
+<a name="aRstar"></a>
+<b>Planet-Star Separation</b></br>
+<i>units: dimensionless</i><br>
+The distance between the planet and the star at mid-transit divided by the <a href="#rstar">stellar radius</a>. For the case of zero orbital eccentricity, the distance at mid-transit is the <a href="#a">semi-major axis of the planetary orbit</a>. <p>
+
+<b>Inclination</b></br>
+<i>units: degrees</i><br>
+The angle between the plane of the sky (perpendicular to the line of sight) and the orbital plane of the planet candidate. <p>
+
+<a name="b"></a>
+<b>Impact Parameter</b></br>
+<i>units: dimensionless</i><br>
+The sky-projected distance between the center of the stellar disc and the center of the planet disc at conjunction, normalized by the <a href="#rstar">stellar radius</a>. <p>
+
+<a name="limbDark"></a>
+<b>Limb Darkening Coefficients</b></br>
+<i>units: dimensionless</i><br>
+Up to four coefficients (a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>,
+a<sub>4</sub>) that define stellar limb darkening (e.g., <a href="https://ui.adsabs.harvard.edu/abs/2000A%26A...363.1081C/abstract">Claret 2000</a>). Limb darkening is
+the variation of specific intensity of the star as a function of &mu;
+= cos(&theta;). &theta; is the angle
+between the line-of-sight of an observer and a line perpendicular to
+the stellar surface at an observed point. Coefficients are dependent upon
+stellar temperature, surface gravity and metallicity. Adopted
+coefficients are required input for <a
+href="https://ui.adsabs.harvard.edu/abs/2002ApJ...580L.171M/abstract" target="_blank">Mandel-Agol
+(2002)</a> fits and are extracted from archived tables (e.g., <a
+href="https://ui.adsabs.harvard.edu/abs/2011A%26A...529A..75C/abstract" target="_blank">Claret and
+Bloemen 2011)</a>. Limb darkening coefficients remain fixed during
+fit minimization. Note that the dependence of limb darkening coefficients upon stellar parameters implies that planet radius does not scale linearly with stellar radius. If new stellar parameters are adopted, the most-correct approach is to re-fit the transit with new limb-darkening coefficients in order to re-measure planet size. <p>
+
+<b>Transit Duration</b></br>
+<i>units: hours</i><br>
+The duration of the observed transits. Duration is measured from first contact between the planet and star until last contact. Contact times are typically computed from a best-fit model produced by a <a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...580L.171M/abstract" target="_blank">Mandel-Agol (2002)</a> model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris. <p>
+
+<b>Ingress Duration</b></br>
+<i>units: hours</i><br>
+The time between first and second contact of the planetary transit. Contact times are typically computed from a best-fit model produced by a <a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...580L.171M/abstract" target="_blank">Mandel-Agol (2002)</a> model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris. <p>
+
+<a name="transitDepth"></a><b>Transit Depth</b></br>
+<i>units: parts per million</i><br>
+The fraction of stellar flux lost at the minimum of the planetary transit. Transit depths are typically computed from a best-fit model produced by a <a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...580L.171M/abstract" target="_blank">Mandel-Agol (2002)</a> model fit to a multi-quarter Kepler light curve, assuming a linear orbital ephemeris. <p>
+
+<a name="SNR"></a><b>Transit Signal-to-Noise</b></br>
+<i>units: dimensionless</i><br>
+Transit depth normalized by the mean uncertainty in the flux during the transits. <p>
+
+<a name="Ntransits"></a>
+<b>Number of Transits</b></br>
+The number of expected transits or partially-observed transits associated with the planet candidate occurring within the searched light curve. This does not include transits that fall completely within data gaps.<p>
+
+<a name="model"></a>
+<b>Transit Model</b><br>
+A reference to the transit model used to fit the data (e.g., <a
+href="https://ui.adsabs.harvard.edu/abs/2002ApJ...580L.171M/abstract" target="_blank">Mandel-Agol 2002</a>). <p>
+
+<b>Limb Darkening Model</b><br>
+A reference to the limb darkening model used to calculate stellar <a href="#limbDark">limb darkening coefficients</a>. <p>
+
+<a name="dof"></a>
+<b>Degrees of Freedom</b><br>    
+The number of degrees of freedom used when fitting the transit model to the data. <p>
+
+<a name="chi2"></a><b>Chi-Square</b><br>
+The goodness of the transit fit to the data. Within the TCE table this quantity is the &chi;<sup>2</sup> statistic. Within the KOI table this quantity is the reduced-&chi;<sup>2</sup> statistic, e.g., divided by the number of <a href="#dof">degrees of freedom</a> in the fit. <p>
+
+<b>Model Convergence</b><br>
+True or false. The model convergence indicates whether the fit converged to a solution. True indicates that the fit was successful. <p>
+
+<hr>
+<a name="planets"></a><b><h2>3. SCALED PLANETARY PARAMETERS</h2></b>
+
+<i>Scaled planetary parameters combine the dimensionless fit parameters
+with physical stellar parameters to produce planet characteristics in
+physical units.</i><p>
+
+<a name="Rp"></a>
+<b>Planetary Radius</b></br>
+<i>units: Earth radii</i><br>
+The radius of the planet. Planetary radius is the product of the <a href="#RpRstar">planet star radius ratio</a> and the <a href="#rstar">stellar radius</a>. <p>
+
+<a name="a"></a>
+<b>Orbit Semi-Major Axis</b></br>
+<i>units: Astronomical Unit (au)</i><br>
+Half of the long axis of the ellipse defining a planet's orbit. For a circular orbit this is the planet-star separation. The semi-major axis is derived based on Kepler's
+third law, i.e., utilizing the orbital period and stellar mass, not
+scaling the planet-star separation by the <a href="#rstar">stellar radius</a>.<p>
+
+<a name="Teq"></a>
+<b>Equilibrium Temperature</b></br>
+<i>units: Kelvin</i><br>
+Approximation for the temperature of the planet. The calculation of equilibrium temperature assumes i) thermodynamic equilibrium between the incident stellar flux and the radiated heat from the planet, ii) a Bond albedo (the fraction of total power incident upon the planet scattered back into space) of 0.3, iii) that the planet and star are blackbodies, and iv) that the heat is evenly distributed between the day and night sides of the planet. <p>
+
+<hr>
+<a name="stars"></a><b><h2>4. STELLAR PARAMETERS</h2></b>
+
+<i>Best-fit planetary transit parameters are typically normalized to the
+size of the host star. Physical planet parameters may be derived by
+scaling to the star's size and temperature. Transit parameters also depend weakly upon the limb
+darkening coefficients which are derived from the stellar parameters (e.g., <a
+href="https://ui.adsabs.harvard.edu/abs/2011A%26A...529A..75C/abstract" target="_blank">Claret and
+Bloemen 2011)</a>. Stellar <a href="#teff">effective temperature</a>, <a href="#logg">surface gravity</a>, <a href="#FeH">metallicity</a>, <a href="#rstar">radius</a>, <a href="#mstar">mass</a> and <a href="#tau">age</a> should comprise a consistent set. Associated error estimates are 1-&sigma; uncertainties.</i> <p>
+
+<a name="teff"></a>
+<b>Stellar Effective Temperature</b></br>
+<i>units: Kelvin</i><br>
+The photospheric temperature of the star. <p>
+
+<a name="logg"></a>
+<b>Stellar Surface Gravity</b></br>
+<i>units: log<sub>10</sub>(cm s<sup>-2</sup>)</i><br>
+The base-10 logarithm of the acceleration due to gravity at the surface of the star. <p>
+
+<a name="FeH"></a>
+<b>Stellar Metallicity </b></br>
+<i>units: dimensionless</i><br>
+The base-10 logarithm of the Fe to H ratio at the surface of the star, normalized by the solar Fe to H ratio. <p>
+
+<a name="rstar"></a>
+<b>Stellar Radius</b></br>
+<i>units: solar radii</i><br>
+The photospheric radius of the star. <p>
+
+<a name="mstar"></a>
+<b>Stellar Mass</b></br>
+<i>units: solar mass</i><br>
+The mass of the star. <p>
+
+<a name="tau"></a>
+<b>Stellar Age</b></br>
+<i>units: Gyr</i><br>
+The age of the star. <p>
+
+<b>Provenance of Stellar Parameters</b></br>
+A flag describing the source of the stellar parameters.
+<ul>
+<li><b>KIC</b> = the parameters are extracted from the Kepler Input Catalog (<a href="https://ui.adsabs.harvard.edu/abs/2011AJ....142..112B/abstract" target="_blank">Brown et al. 2011</a>). Uncertainties of Teff = 200 K, log(g) = 0.3 dex and [Fe/H] = 0.4.
+<li><b>J-K</b> = the star is unclassified in the KIC, J-K has been used to estimate temperature. The host star is assumed to be on the ZAMS with corresponding log(g) based on the Schmidt-Kaler relation.
+<li><b>Solar</b> = the star is unclassified in the KIC, so the host star is assumed to have solar properties.
+<li><b>SME</b> = Spectroscopic parameters derived from SME analysis (<a href="https://ui.adsabs.harvard.edu/abs/1996A%26AS..118..595V/abstract" target="_blank">Valenti and Piskunov 1996</a>). Stellar parameters are derived based on stellar evolution models.
+<li><b>SPC</b> = Spectroscopic parameters derived from SPC analysis (<a href="https://ui.adsabs.harvard.edu/abs/2012Natur.486..375B/abstract" target="_blank">Buchhave et al. 2012</a>). Stellar parameters are derived based on stellar evolution models.
+<li><b>Pinsonneault</b> = uses a revised T<sub>eff</sub> scale from <a href="https://ui.adsabs.harvard.edu/abs/2012ApJS..199...30P/abstract" target="_blank">Pinsonneault et al. (2012)</a> with [Fe/H] fixed at -0.2. The quantity log(g) is taken from the KIC. Values are then revised by fitting to Yonsei-Yale stellar evolution models (<a href="https://ui.adsabs.harvard.edu/abs/2001ApJS..136..417Y/abstract" target="_blank">Yi et al. 2001)</a>.
+<li><b>Astero</b> = host star properties have been measured by comparison with astroseismologial models.
+</ul>
+  
+<hr>
+<a name="lcstats"></a><b><h2>5. LIGHT CURVE-BASED KOI VETTING STATISTICS</b></h2>
+
+<i>The <a href="https://archive.stsci.edu/kepler/manuals/KSCI-19081-001_Data_Processing_Handbook.pdf" target="_blank">Transiting Planet Search (TPS) module</a> of the Kepler data analysis pipeline performs a detection test for planet transits in the multi-quarter, gap-filled flux time series. The TPS module detrends each quarterly PDC light curve to remove edge effects around data gaps and then combines the data segments together, filling gaps with interpolated data so as to condition the flux time series for a matched filter. The module applies an adaptive, wavelet-based matched filter (<a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...575..493J/abstract" target="_blank">Jenkins 2002</a>, <a href="https://ui.adsabs.harvard.edu/abs/2010ApJ...713L..87J/abstract" target="_blank">Jenkins et al. 2010</a> and <a href="https://ui.adsabs.harvard.edu/abs/2012ApJS..199...24T/abstract" target="_blank">Tenenbaum et al. (2012)</a>) to perform a joint characterization of observation noise and detection of transit-like features in the light curve.<p>
+
+<a name="tpsSES"></a>The TPS module estimates the Power Spectral Density of the
+flux time series as a function in time. This provides coefficients for a
+whitening filter to accommodate non-stationary, non-white noise and yields
+Single Event Statistic (SES) time series components. These can be interpreted as
+measurements of the statistical significance of the presence of a transit
+of trial duration at each point in the time series.<p>
+
+<a name="tpsMES"></a>Single Event Statistics are folded at each trial orbital period and the maximum
+Multiple Event Statistic (MES) is obtained over all trial periods and phases. The MES estimates the signal to
+noise ratio of the putative transit-like sequence against the measurement
+noise. The MES threshold for defining the sample of <a href="https://ui.adsabs.harvard.edu/abs/2012ApJS..199...24T/abstract" target="_blank">Threshold Crossing Events (TCEs)</a> is
+provided within the <a href="">TCE Release Notes</a>. For reference, a lower MES threshold of 7.1&sigma; limits the number of false positives in the TCE sample due to statistical random noise to
+less than 1 over the primary mission (<a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...564..495J/abstract" target="_blank">Jenkins, Caldwell and Borucki 2002</a>).</i><p>
+
+<a name="ses"></a><b>Maximum Single Event Statistic</b><br>
+<i>units: dimensionless</i><br>
+The maximum calculated value of the <a href="#tpsSES">SES</a>. Maximum SES statistics for different TCEs from the same target differ because the most significant TCE is removed from the time series before repeating the test for further, weaker transit signals. <p>
+
+<a name="MES"></a>
+<b>Maximum Multiple Event Statistic</b><br>
+<i>units: dimensionless</i><br>
+The maximum calculated value of the <a href="#tpsMES">MES</a>. TCEs that meet the maximum MES threshold criterion and other criteria listed in the <a href="">TCE release notes</a> are delivered to the <a href="https://archive.stsci.edu/kepler/manuals/KSCI-19081-001_Data_Processing_Handbook.pdf" target="_blank">Data Validation (DV) module</a> of the Kepler data analysis pipeline for transit characterization and the calculation of statistics required for disposition.
+A TCE exceeding the maximum MES threshold are removed from the time-series data and the SES and MES statistics recalculated. If a second TCE exceeds the maximum MES threshold then it is also propagated through the DV module and the cycle is iterated until no more events exceed the criteria. Candidate multi-planet systems are thus found this way. Users of the TCE table can exploit the maximum MES statistic to help filter and sort samples of TCEs for the purposes of discerning the event quality, determining the likelihood of planet candidacy, or assessing the risks of observational follow-up.<p>
+
+<a name="odd-even"></a>
+<b>Odd-Even Depth Comparison Statistic</b><br>
+<i>units: dimensionless</i><br>
+A transit model is fit independently to the even-numbered transits and the odd-numbered transits. The depth of the fit to even-numbered transits is compared to that of the odd-numbered transits. A statistically significant difference in the transit depths is an indication of a planetary candidate false positive, due either to a background binary contaminant in the light curve or a binary star system displaying a grazing eclipse. The odd-even depth statistic is a number by which the depths of the odd transit and even transit fits deviate. The larger the statistic, the more likely the event is an astrophysical false positive. The odd-even diagnostic is only useful for identifying circular or near-circular binary stars. The TCE table provides the statistic by a percentage likelihood of depth mis-match, whereas the KOI table provides the statistic in terms of the number of &sigma; deviating from equal depth. <p>
+
+<hr>
+<a name="pixelstats"></a>
+<h2>6. PIXEL-BASED KOI VETTING STATISTICS</h2>
+
+<i>Planetary transit false positives are commonly caused by light curve contamination from an eclipsing binary falling partially within the target aperture (i.e., the pixels used to collect and sum target flux). Two pixel analysis methods are used to identify such eclipsing binaries: flux-weighted centroiding, which measures how the center of light in the collected pixels changes during a transit, and PRF-fit difference images, which localize the source of the transit signal. Both methods provide an estimate of the location of the source of the transit signal. When that source location is offset from the target star by more than 3-&sigma;, it is likely that the transit signal is due to a background source (note the caveats due to crowding described below). These analysis techniques use pixel-level data, available in the Target Pixel Files (TPFs). The resulting position measurements
+are compared with the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php" target="_blank">Kepler Input Catalog</a> (KIC) (<a href="https://ui.adsabs.harvard.edu/abs/2011AJ....142..112B/abstract" target="_blank">Brown et al. 2011</a>).<p>
+
+<p>In flux-weighted centroid analysis, when more than one source is present within a pixel aperture, either fully or partially,
+then the combined center of light within the collected pixels
+will occur between the locations of the sources. When the
+flux from either the target or one of the nearby contaminants varies in a transit or eclipse, then the combined center of light within the aperture will move across the focal plane. This motion is called a centroid shift. The location of the varying source can often be inferred from the centroid shift. The size and direction of the centroid shift is measured using the flux-weighted (FW) mean, (e.g., the first moment of the pixel data). This mean is computed with every flux measurement (30-minute long cadence), creating a time series of flux-weighted means. The centroid shift is measured by comparing portions of the flux-weighted mean time series that are Out-Of-Transit (OOT) with
+portions that are In-Transit (IT). The flux-weighted shift of the IT mean from the OOT mean is given as Right Ascension and Declination shifts. The offset of the transiting source object from the OOT flux-weighted mean is computed by taking the product of the FW shift and the factor [1 - 1 / (fractional transit depth)]. The <a href="#FWsourceA">Right Ascension, &alpha; (J2000)</a>, and <a href="#FWsourceD">Declination, &delta; (J2000)</a>, of the transiting object calculated in this way are reported in the table. The <a href="#FWdA">&alpha;</a> and <a href="#FWsourceD">&delta;</a> offsets of the resulting source location from the KIC target star position are also reported. The uncertainties and significance of the FW shifts and offsets are provided but do not reflect systematics caused by crowding.  The flux-weighted method can be very accurate when the target star is well isolated and the transit source is located (well) within the flux aperture associated with the target star.</p>
+
+<p>The PRF-fit difference image method uses three images: i) an average of Out-Of-Transit (OOT) Target Pixel File images from data that were obtained near but not during transit events, ii) an average of In-Transit (IT) image Target Pixel File images that were collected during transit events, and iii) a Difference Image (DIFF) that is the difference between the Out-Of-Transit and
+In-Transit average images. The difference image provides an image of the transit source (neglecting variability of field stars). The Pixel Response Function (PRF) is a convolution of the Kepler Point Spread Function model with a model of typical spacecraft pointing jitter, providing a system point spread function (<a href="https://ui.adsabs.harvard.edu/abs/2010ApJ...713L..97B/abstract" target="_blank">Bryson et al. 2010)</a>.  The PRF is fit separately to the OOT and DIFF images, providing a measured location of the target star (fit to the OOT image) and a measured location of the transit source (fit to the DIFF image). The offset of the transit source location from the target star is given in the table as 
+Right Ascension and Declination offsets (<a href="#PRFdA">&Delta;&alpha;</a>,<a href="#PRFdA">&Delta;&delta;</a>) as well as magnitude (sky offset <a href="#PRFdT">&Delta;&theta;</a>).</p>
+
+<p>PRF offsets can only be computed on a per-quarter basis.  Quarterly results are combined using two methods. i) Single Quarter (SQ) images and centroids are calculated for each individual quarter. The quarterly centroid offsets are then combined by weighted mean. ii) PRFs are simultaneously fit across multiple quarters (MQ). The MQ method is computationally expensive and only performed for very low SNR targets./<p>
+
+<p>The target position measured by the PRF fit to the OOT images is vulnerable to crowding. Therefore an alternative PRF offset of the transit source (measured by the PRF fit to the DIFF image) from the KIC position of the target star is provided. Both the flux-weighted and PRF-fit methods will have systematic errors due to crowding when other stars appear in the aperture's pixels, though these error are smaller for the PRF-fit method compared to the flux-weighted method.</p>
+
+<p>The associated error estimates are 1-&sigma; uncertainties.</p>
+
+<b>FW Source &alpha;(OOT)</b><br>
+<i>units: hours</i><br>
+The Right Ascension (J2000) of the location of the transiting object calculated from the flux-weighted centroids. This result does not reflect the systematics due to crowding which can introduce significant errors in the calculated position.<p>
+
+<b>FW Source &delta;(OOT)</b><br>
+<i>units: degrees</i><br>
+The Declination (J2000) of the location of the transiting object calculated from the flux-weighted centroids. This result does not reflect the systematics due to crowding which can introduce significant errors in the calculated position.<p>
+
+<b>FW &Delta;&alpha;(OOT)</b><br>
+<i>units: seconds (not arcseconds)</i><br>
+The RA (J2000) flux-weighted centroid shift. This is the RA of the in-transit flux weighted centroid minus the RA of the out-of-transit flux weighted centroid. <p>
+
+<b>FW &Delta;&delta;(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The Dec (J2000) flux-weighted centroid shift. This is the Dec of the in-transit flux weighted centroid minus the Dec of the out-of-transit flux weighted centroid. <p>
+
+<b>FW Source &Delta;&alpha;(OOT)</b><br>
+<i>units: seconds (not arcseconds)</i><br>
+The calculated Right Ascension offset of the transiting or eclipsing object from the KIC location of the target star. The accuracy of this calculation degrades when the transit source has significant flux that falls outside the photometric aperture + a halo of pixels around it.<p>
+
+<b>FW Source &Delta;&delta;(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The calculated Declination offset of the transiting or eclipsing object from the KIC location of the target star. The accuracy of this calculation degrades when the transit source has significant flux that falls outside the photometric aperture + a halo of pixels around it.<p>
+
+<a name="FWshiftSig"></a>
+<b>FW Offset Significance</b><br>
+<i>units: percent</i><br>
+Indicates whether there is a statistically significant flux-weighted offset between in-transit and out-of-transit images.  100% indicates there is no offset and there is confidence that the transit is on the target star. The accuracy of this calculation degrades when the transit source has significant flux that falls outside the photometric aperture + a halo of pixels around it.<p>
+
+<a name="PRFdA"></a>
+<b>PRF &Delta;&alpha;<sub>SQ</sub>(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the RA (J2000) direction between the best-fit PRF centroids from the Out-Of-Transit image and the Difference Image by averaging the weighted single-quarter measurements. The out-of-transit centroids are subtracted from the difference image centroids.<p>
+
+<a name="PRFdD"></a>
+<b>PRF &Delta;&delta;<sub>SQ</sub>(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the Dec (J2000) direction between the best-fit PRF centroids from the Out-Of-Transit image and the Difference Image by averaging the weighted single-quarter measurements. The out-of-transit centroids are subtracted from the difference image centroids.<p>
+
+<a name="PRFdT"></a>
+<b>PRF &Delta;&theta;<sub>SQ</sub>(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset on the plane of the sky between the best-fit PRF centroids from the Out-Of-Transit image and the Difference Image by averaging the weighted single-quarter measurements. The out-of-transit centroids are subtracted from the difference image centroids. <p>
+
+<b>PRF &Delta;&alpha;<sub>MQ</sub>(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the RA (J2000) direction between the best-fit PRF centroids from the Out-Of-Transit image and the Difference Image by simultaneously fitting all quarters.  The out-of-transit centroid is subtracted from the difference image centroid.<p>
+
+<b>PRF &Delta;&delta;<sub>MQ</sub>(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the Dec (J2000) direction between the best-fit PRF centroids from the Out-Of-Transit image and the Difference Image by simultaneously fitting all quarters. The out-of-transit centroid is subtracted from the difference image centroid. <p>
+
+<b>PRF &Delta;&theta;<sub>MQ</sub>(OOT)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset on the plane of the sky between the best-fit PRF centroids from the Out-Of-Transit image and the Difference Image by simultaneously fitting all quarters. The out-of-transit centroid is subtracted from the difference image centroid. <p>
+
+<b>PRF &Delta;&alpha;<sub>SQ</sub>(KIC)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the RA (J2000) direction between the best-fit PRF centroids from the difference image and the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php" target="_blank">Kepler Input Catalog</a> position by averaging the weighted single-quarter measurements. The KIC position is subtracted from the difference image centroids. <p>
+
+<b>PRF &Delta;&delta;<sub>SQ</sub>(KIC)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the Dec (J2000) direction between the best-fit PRF centroids from the difference image and the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php" target="_blank">Kepler Input Catalog</a> position by averaging the weighted single-quarter measurements. The KIC position is subtracted from the difference image centroids. <p>
+
+<b>PRF &Delta;&theta;<sub>SQ</sub>(KIC)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the Dec (J2000) direction between the best-fit PRF centroids from the difference image and the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php" target="_blank">Kepler Input Catalog</a> position by averaging the weighted single-quarter measurements. The KIC position is subtracted from the difference image centroids. <p>
+
+<b>PRF &Delta;&alpha;<sub>MQ</sub>(KIC)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the RA (J2000) direction between the best-fit PRF centroids from the difference image and the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php">Kepler Input Catalog</a> position by simultaneously fitting all quarters. The KIC position is subtracted from the difference image centroid.  <p>
+
+<b>PRF &Delta;&delta;<sub>MQ</sub>(KIC)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset in the Dec (J2000) direction between the best-fit PRF centroids from the difference  image and the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php" target="_blank">Kepler Input Catalog</a> position by simultaneously fitting all quarters. The KIC position is subtracted from the difference image centroid.  <p>
+
+<b>PRF &Delta;&theta;<sub>MQ</sub>(KIC)</b><br>
+<i>units: arcseconds</i><br>
+The angular offset on the plane of the sky between the best-fit PRF centroids from the difference image and the <a href="https://archive.stsci.edu/kepler/kepler_fov/search.php">Kepler Input Catalog</a> position by simultaneously fitting all quarters. The KIC position is subtracted from the difference image centroid. <p>
+
+<hr>
+
+</div>
+</div> <!-- end docs -->
+
+
+<div id="logoBox" class="tbox">
+  <p><a href="http://www.nasa.gov" title="National Aeronautics and Space Administration">
+        <img src="/images/logos/NASA_small.jpg" alt="NASA" width="87" height="75"/></a>
+
+    <a href="http://www.ipac.caltech.edu" title="Infrared Processing and Analysis Center">
+        <img src="/images/logos/IPAC_small.jpg" alt="IPAC" width="139" height="75" /></a>
+    <a href="http://nexsci.caltech.edu" title="NASA Exoplanet Science Institute">
+        <img src="/images/logos/logo_nexsci.gif" alt="NExScI" /></a>
+     <a href="http://www.caltech.edu" title="California Institute of Technology">
+        <img src="/images/logos/Caltech_LOGO-Orange_PMS165.jpg" alt="Caltech" width="25%" /></a></p>
+
+</div> <!-- end tbox div -->
+
+
+<div id="footerMenu" class="hbox">
+         <div class="home_box">
+           <a href="/index.html">Home</a>
+         </div>
+       
+         <div class="archive_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/about.html">About Us</a>
+         </div>
+       
+         <div class="data_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/data.html">Data</a>
+         </div>
+       
+         <div class="tool_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/tools.html">Tools</a>
+         </div>
+       
+         <div class="help_box" onmouseout="jQuery(this).children('ul').hide()" onmouseover="jQuery(this).children('ul').show()">
+           <a href="/docs/help.html">Support</a>
+         </div>
+           
+         <div class="clear"></div>
+</div> <!-- end hbox -->
+
+
+
+</div> <!-- end b2box -->
+</div> <!-- end bbox -->
+</body>
+</html>
+

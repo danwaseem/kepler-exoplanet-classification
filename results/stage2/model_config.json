@@ -1,0 +1,39 @@
+{
+  "team_finalized": false,
+  "feature_configuration": "primary_leakage_aware_provisional",
+  "excluded_from_training": [
+    "koi_fwm_stat_sig"
+  ],
+  "experimental_configuration_not_trained": "data/processed/experimental_features_with_fwm_stat_sig.csv",
+  "split_file": "data/processed/proposed_splits.csv",
+  "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+  "hyperparameters": {
+    "criterion": "gini",
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_leaf_nodes": null,
+    "ccp_alpha": 0.0,
+    "class_weight": null,
+    "random_state": 245,
+    "imputer": "median"
+  },
+  "validation_curve_max_depth": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    15,
+    20,
+    25,
+    30,
+    37,
+    null
+  ],
+  "test_scored": false
+}

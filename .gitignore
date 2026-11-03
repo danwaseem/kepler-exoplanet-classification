@@ -1,0 +1,36 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mplconfig/
+.mypy_cache/
+.ipynb_checkpoints/
+*.pyc
+.DS_Store
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Large or regenerable archives
+DATA245_Team_Shared_Setup.zip
+DATA245_Intermediate_Report_Assets.zip
+
+# Duplicate NASA CSV copies (canonical file is data/raw/)
+/koi_cumulative_2026-10-06.csv
+team_shared_setup/koi_cumulative_2026-10-06.csv
+team_shared_setup/data/raw/koi_cumulative_2026-10-06.csv
+
+# Large fitted forest binary (metrics and configs remain tracked)
+results/stage4/tuned_forest.joblib
+
+# Course assignment PDFs / personal reports (not needed to reproduce experiments)
+*.pdf
+Intermediate Report Instructions.rtf
+
+# Editor / OS
+*.swp
+.idea/
+.vscode/

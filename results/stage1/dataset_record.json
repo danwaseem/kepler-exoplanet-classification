@@ -1,0 +1,25 @@
+{
+  "sha256": "a85348f20082d24fb14d4a05a9a44c644b801998fad7cec36f8980eb1f0a69ab",
+  "bytes": 11843781,
+  "local_mtime": "2026-10-13T00:33:31-07:00",
+  "canonical_path": "data/raw/koi_cumulative_2026-10-06.csv",
+  "source": "NASA Exoplanet Archive, Kepler Objects of Interest Cumulative Table",
+  "doi": "10.26133/NEA4",
+  "version_date": "2026-10-06",
+  "n_rows": 9564,
+  "n_columns": 153,
+  "dictionary_url": "https://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html",
+  "dictionary_retrieved": "2026-10-31",
+  "dictionary_page_updated": "2021-02-11",
+  "tce_dictionary_url": "https://exoplanetarchive.ipac.caltech.edu/docs/API_tce_columns.html",
+  "koi_2012_definitions_url": "https://exoplanetarchive.ipac.caltech.edu/docs/TableColumnDescriptors.html",
+  "random_seed": 245,
+  "holdout": {
+    "method": "StratifiedGroupKFold",
+    "n_splits": 5,
+    "fold_index": 0,
+    "shuffle": true,
+    "group": "kepid"
+  },
+  "team_finalized": false
+}

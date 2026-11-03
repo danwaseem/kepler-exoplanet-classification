@@ -1,0 +1,42 @@
+{
+  "forest_validation_macro_f1": [
+    0.8243003544258775,
+    0.7929040353469535,
+    0.8164441561031263,
+    0.8215643135829312,
+    0.8228731335570555
+  ],
+  "tree_validation_macro_f1": [
+    0.7808886829850524,
+    0.754793419577784,
+    0.7636752646489157,
+    0.7671637588128108,
+    0.7915288299560387
+  ],
+  "forest_scores": [
+    0.8243003544258775,
+    0.7929040353469535,
+    0.8164441561031263,
+    0.8215643135829312,
+    0.8228731335570555
+  ],
+  "stability": {
+    "forest_mean_spearman": 0.1780423786739576,
+    "forest_min_spearman": 0.0323444976076555,
+    "forest_stable": false,
+    "tree_mean_spearman": 0.4205752912743151,
+    "tree_stable": false
+  },
+  "centroid": {
+    "forest_top_count": 2,
+    "forest_positive_share": 0.4497166872918535,
+    "forest_dominates": false,
+    "tree_top_count": 4,
+    "tree_positive_share": 0.360559374558889,
+    "tree_dominates": false
+  },
+  "impurity_vs_permutation_spearman": 0.6325085440874915,
+  "tree_forest_spearman": 0.5762315225000363,
+  "shared_top10": 6,
+  "n_strong_pairs": 166
+}

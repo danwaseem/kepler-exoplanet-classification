@@ -1,0 +1,100 @@
+{
+  "full_sample": {
+    "n_rows": 9564,
+    "n_groups": 8214,
+    "counts": {
+      "CONFIRMED": 2748,
+      "CANDIDATE": 1977,
+      "FALSE POSITIVE": 4839
+    },
+    "rates": {
+      "CONFIRMED": 0.28732747804265996,
+      "CANDIDATE": 0.20671267252195735,
+      "FALSE POSITIVE": 0.5059598494353826
+    },
+    "percentage_point_difference_from_full_sample": {
+      "CONFIRMED": 0.0,
+      "CANDIDATE": 0.0,
+      "FALSE POSITIVE": 0.0
+    }
+  },
+  "development": {
+    "n_rows": 7653,
+    "n_groups": 6573,
+    "counts": {
+      "CONFIRMED": 2199,
+      "CANDIDATE": 1582,
+      "FALSE POSITIVE": 3872
+    },
+    "rates": {
+      "CONFIRMED": 0.28733829870638966,
+      "CANDIDATE": 0.20671632039722984,
+      "FALSE POSITIVE": 0.5059453808963805
+    },
+    "percentage_point_difference_from_full_sample": {
+      "CONFIRMED": 0.0010820663729704805,
+      "CANDIDATE": 0.00036478752724888874,
+      "FALSE POSITIVE": -0.0014468539002110425
+    }
+  },
+  "development_primary_rows": {
+    "n_rows": 7381,
+    "n_groups": 6357,
+    "counts": {
+      "CONFIRMED": 2197,
+      "CANDIDATE": 1505,
+      "FALSE POSITIVE": 3679
+    },
+    "rates": {
+      "CONFIRMED": 0.2976561441539087,
+      "CANDIDATE": 0.20390191031025606,
+      "FALSE POSITIVE": 0.49844194553583526
+    },
+    "percentage_point_difference_from_full_sample": {
+      "CONFIRMED": 1.0328666111248719,
+      "CANDIDATE": -0.281076221170129,
+      "FALSE POSITIVE": -0.7517903899547373
+    }
+  },
+  "test": {
+    "n_rows": 1911,
+    "n_groups": 1641,
+    "counts": {
+      "CONFIRMED": 549,
+      "CANDIDATE": 395,
+      "FALSE POSITIVE": 967
+    },
+    "rates": {
+      "CONFIRMED": 0.28728414442700156,
+      "CANDIDATE": 0.206698063840921,
+      "FALSE POSITIVE": 0.5060177917320774
+    },
+    "percentage_point_difference_from_full_sample": {
+      "CONFIRMED": -0.004333361565839189,
+      "CANDIDATE": -0.0014608681036365478,
+      "FALSE POSITIVE": 0.005794229669475737
+    }
+  },
+  "test_primary_rows": {
+    "n_rows": 1820,
+    "n_groups": 1570,
+    "counts": {
+      "CONFIRMED": 549,
+      "CANDIDATE": 368,
+      "FALSE POSITIVE": 903
+    },
+    "rates": {
+      "CONFIRMED": 0.30164835164835163,
+      "CANDIDATE": 0.2021978021978022,
+      "FALSE POSITIVE": 0.49615384615384617
+    },
+    "percentage_point_difference_from_full_sample": {
+      "CONFIRMED": 1.4320873605691675,
+      "CANDIDATE": -0.45148703241551513,
+      "FALSE POSITIVE": -0.9806003281536468
+    }
+  },
+  "group_overlap": 0,
+  "test_group_fraction": 0.1997808619430241,
+  "test_row_fraction": 0.19981179422835635
+}

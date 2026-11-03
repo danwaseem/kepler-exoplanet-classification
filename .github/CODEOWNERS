@@ -1,0 +1,45 @@
+# Suggested ownership for pull-request review.
+# Replace the placeholders with each teammate's GitHub username once the
+# repository is created. Branch protection is not assumed.
+
+# Shared preprocessing, splits, and evaluation — review before merge
+/src/exoplanet/config.py
+/src/exoplanet/io.py
+/src/exoplanet/audit.py
+/src/exoplanet/splits.py
+/src/exoplanet/preprocess.py
+/src/exoplanet/development.py
+/src/exoplanet/evaluation.py
+/data/processed/
+/tests/
+
+# Person 1 — Sanjana Reddy Katham (Logistic Regression, Naive Bayes)
+/src/exoplanet/models/person1_baselines/
+/experiments/person1_baselines/
+
+# Person 2 — Venkata Sai Bhavana Yarrapragada (KNN, SVM)
+/src/exoplanet/models/person2_knn_svm/
+/experiments/person2_knn_svm/
+
+# Person 3 — Danish Waseem (Decision Tree, Random Forest)
+/src/exoplanet/models/person3_trees/
+/src/exoplanet/stage2.py
+/src/exoplanet/stage3.py
+/src/exoplanet/stage4.py
+/src/exoplanet/stage5.py
+/src/exoplanet/stage5b.py
+/experiments/person3_trees/
+/results/stage2/
+/results/stage3/
+/results/stage4/
+/results/stage5/
+/results/stage5b/
+/figures/stage2/
+/figures/stage3/
+/figures/stage4/
+/figures/stage5/
+/figures/stage5b/
+
+# Person 4 — Nathan Pak (PCA, K-Means)
+/src/exoplanet/models/person4_pca_clustering/
+/experiments/person4_pca_clustering/
