@@ -1,9 +1,14 @@
 # Person 3 experiments — Danish Waseem
 
-Stages 1–5B already live at the repository root as `run_stage1.py` … `run_stage5b.py`. The wrappers in this directory call those same entry points so the ownership layout is clear for the team.
+Stage 1 (shared) entry point: `scripts/run_stage1.py`. Stages 2–5B entry points live in this directory.
 
 ```bash
+python scripts/run_stage1.py
+python experiments/person3_trees/run_stage2.py
+python experiments/person3_trees/run_stage3.py
 python experiments/person3_trees/run_stage4.py
+python experiments/person3_trees/run_stage5.py
+python experiments/person3_trees/run_stage5b.py
 ```
 
 | Stage | Results | Figures |

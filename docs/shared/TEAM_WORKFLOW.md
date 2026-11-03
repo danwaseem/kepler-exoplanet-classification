@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 1 Sanjana Reddy Katham | Logistic Regression, Naive Bayes | `src/exoplanet/models/person1_baselines/` | `experiments/person1_baselines/` | `results|figures|docs/person1/` | `feature/logistic-naive-bayes` |
 | 2 Venkata Sai Bhavana Yarrapragada | KNN, SVM | `src/exoplanet/models/person2_knn_svm/` | `experiments/person2_knn_svm/` | `results|figures|docs/person2/` | `feature/knn-svm` |
-| 3 Danish Waseem | Decision Tree, Random Forest | `src/exoplanet/stage2.py`–`stage5b.py`, `models/person3_trees/` | `experiments/person3_trees/`, root `run_stage*.py` | `results|figures|docs/person3/` | `feature/decision-tree-random-forest` |
+| 3 Danish Waseem | Decision Tree, Random Forest | `src/exoplanet/stage2.py`–`stage5b.py`, `models/person3_trees/` | `experiments/person3_trees/`, `scripts/run_stage1.py` | `results|figures|docs/person3/` | `feature/decision-tree-random-forest` |
 | 4 Nathan Pak | PCA, K-Means | `src/exoplanet/models/person4_pca_clustering/` | `experiments/person4_pca_clustering/` | `results|figures|docs/person4/` | `feature/pca-clustering` |
 
 Shared modules: `config`, `io`, `audit`, `splits`, `preprocess`, `development`, `evaluation`. Shared Stage 1 outputs: `results/shared/`, `figures/shared/`, `docs/shared/`.

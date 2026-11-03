@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Wrapper: Person 3 Stage 4 entry point."""
+"""Run the Stage 4 forest comparison from the repository root."""
 
-from pathlib import Path
-import runpy
 import sys
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
-runpy.run_path(str(ROOT / "run_stage4.py"), run_name="__main__")
+
+from exoplanet.stage4 import main
+
+if __name__ == "__main__":
+    main()

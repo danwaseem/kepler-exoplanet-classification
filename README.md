@@ -25,7 +25,7 @@ GitHub: [danwaseem/kepler-exoplanet-classification](https://github.com/danwaseem
 | --- | --- | --- | --- |
 | 1 | Sanjana Reddy Katham | Logistic Regression, Naive Bayes, baselines, class distribution | `experiments/person1_baselines/`, `src/exoplanet/models/person1_baselines/` |
 | 2 | Venkata Sai Bhavana Yarrapragada | KNN, SVM, scaling, hyperparameter tuning | `experiments/person2_knn_svm/`, `src/exoplanet/models/person2_knn_svm/` |
-| 3 | Danish Waseem | Decision Tree, Random Forest, pruning, feature importance, centroid sensitivity | `experiments/person3_trees/`, `src/exoplanet/stage2.py`–`stage5b.py` |
+| 3 | Danish Waseem | Decision Tree, Random Forest, pruning, feature importance, centroid sensitivity | `experiments/person3_trees/`, `src/exoplanet/stage2.py`–`stage5b.py`, `scripts/run_stage1.py` |
 | 4 | Nathan Pak | PCA, K-Means, dimensionality reduction, clustering visualization | `experiments/person4_pca_clustering/`, `src/exoplanet/models/person4_pca_clustering/` |
 
 All four members share responsibility for dataset understanding, cleaning and preprocessing, exploratory analysis, methodology, evaluation design, final model comparison, interpretation, documentation, and the final presentation.
@@ -145,13 +145,12 @@ PYTHONPATH=src python experiments/person4_pca_clustering/your_script.py
 Person 3 stages are already completed. Re-running them should not overwrite results without a team decision:
 
 ```bash
-python run_stage1.py
-python run_stage2.py
-python run_stage3.py
-python run_stage4.py
-python run_stage5.py
-python run_stage5b.py
-# or: python experiments/person3_trees/run_stage4.py
+python scripts/run_stage1.py
+python experiments/person3_trees/run_stage2.py
+python experiments/person3_trees/run_stage3.py
+python experiments/person3_trees/run_stage4.py
+python experiments/person3_trees/run_stage5.py
+python experiments/person3_trees/run_stage5b.py
 ```
 
 Save new metrics under `results/personN/<experiment_name>/`, figures under `figures/personN/`, and notes under `docs/personN/`.
@@ -165,6 +164,7 @@ data/external/            column-page documentation
 src/exoplanet/            shared loaders, preprocess, evaluation
 src/exoplanet/models/     per-person model packages
 experiments/              person1_baselines, person2_knn_svm, person3_trees, person4_pca_clustering
+scripts/                  shared Stage 1 entry point
 results/shared/           Stage 1 audits and shared artifacts
 results/person1…4/        per-person metrics
 figures/shared/           shared EDA figures

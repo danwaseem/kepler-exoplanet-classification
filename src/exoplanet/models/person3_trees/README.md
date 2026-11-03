@@ -5,7 +5,7 @@
 Existing stage modules remain at:
 
 - `src/exoplanet/stage2.py` … `stage5b.py`
-- `run_stage1.py` … `run_stage5b.py`
+- `scripts/run_stage1.py` and `experiments/person3_trees/run_stage2.py` … `run_stage5b.py`
 - Results: `results/person3/decision_tree/{stage2,stage3}/`, `random_forest/`, `feature_importance/`, `centroid_sensitivity/`
 - Figures: matching paths under `figures/person3/`
 - Shared Stage 1 outputs: `results/shared/`, `figures/shared/`, `docs/shared/`
