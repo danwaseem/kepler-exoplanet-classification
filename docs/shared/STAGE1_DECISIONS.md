@@ -1,6 +1,6 @@
 # Stage 1 decisions
 
-This note explains the rules behind `docs/stage1_findings.md`. The counts in that file are written by `python run_stage1.py`. The configuration is proposed for the team and is not final.
+This note explains the rules behind `docs/shared/stage1_findings.md`. The counts in that file are written by `python run_stage1.py`. The configuration is proposed for the team and is not final.
 
 ## Source files
 

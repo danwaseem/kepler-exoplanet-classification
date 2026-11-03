@@ -6,4 +6,12 @@ Stages 1–5B already live at the repository root as `run_stage1.py` … `run_st
 python experiments/person3_trees/run_stage4.py
 ```
 
-Results remain under `results/stage1/` … `results/stage5b/`. Do not retune or score the test partition without a separate team decision.
+| Stage | Results | Figures |
+| --- | --- | --- |
+| 1 (shared) | `results/shared/` | `figures/shared/` |
+| 2–3 Decision Tree | `results/person3/decision_tree/stage2|stage3/` | `figures/person3/decision_tree/stage2|stage3/` |
+| 4 Random Forest | `results/person3/random_forest/` | `figures/person3/random_forest/` |
+| 5 Feature importance | `results/person3/feature_importance/` | `figures/person3/feature_importance/` |
+| 5B Centroid sensitivity | `results/person3/centroid_sensitivity/` | `figures/person3/centroid_sensitivity/` |
+
+Do not retune or score the test partition without a separate team decision.

@@ -339,7 +339,7 @@ Each uncertainty column was reviewed on its own. Empty columns, columns whose pa
 | `koi_steff_err2` | `koi_steff` | 1.3% | include |  |
 | `koi_time0bk_err1` | `koi_time0bk` | 1.0% | include |  |
 
-Full sentences for each decision are in `results/stage1/column_audit.csv`.
+Full sentences for each decision are in `results/shared/column_audit.csv`.
 
 ### Centroid measurements and disposition flags
 

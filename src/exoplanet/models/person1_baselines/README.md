@@ -15,4 +15,4 @@ from sklearn.pipeline import Pipeline
 
 Use `make_preprocess_pipeline(scale=True)` before logistic regression. Prefer the same within-fold scaler for Gaussian Naive Bayes. Fit preprocessing inside each training fold. Do not score the test partition during development.
 
-Write outputs under `results/person1_baselines/<experiment_name>/`.
+Write outputs under `results/person1/<experiment_name>/`.

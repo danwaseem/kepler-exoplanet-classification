@@ -7,4 +7,4 @@ Add Logistic Regression and Naive Bayes entry points here.
 PYTHONPATH=src python experiments/person1_baselines/your_script.py
 ```
 
-Save metrics with `exoplanet.evaluation.write_experiment_results("person1_baselines", "experiment_name", summary, config)`.
+Save metrics with `exoplanet.evaluation.write_experiment_results("person1", "experiment_name", summary, config)`.

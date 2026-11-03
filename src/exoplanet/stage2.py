@@ -36,8 +36,8 @@ from exoplanet.config import (
     TARGET_COLUMN,
 )
 
-STAGE2_RESULTS = ROOT / "results" / "stage2"
-STAGE2_FIGURES = ROOT / "figures" / "stage2"
+STAGE2_RESULTS = ROOT / "results" / "person3" / "decision_tree" / "stage2"
+STAGE2_FIGURES = ROOT / "figures" / "person3" / "decision_tree" / "stage2"
 LEAKAGE_FORBIDDEN = {
     "koi_pdisposition",
     "koi_score",

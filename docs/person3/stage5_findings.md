@@ -39,7 +39,7 @@ The forest permutation ranking does not meet the pre-specified stability rule (m
 
 Mean pairwise Spearman correlation of the five fold-level importance vectors: 0.1780 (minimum pair 0.0323).
 
-That correlation uses all 76 features. Many have mean drops near zero, so their order changes from fold to fold. The first three do not. `koi_model_snr` and `koi_dikco_msky` stay in ranks 1–2, and `koi_dicco_msky` is rank 3 on every fold. From rank 4 downward the mean drop is about 0.002, the across-fold standard deviation is as large as the mean, and several features have a negative drop on at least one fold. Those mean ranks are not a stable ordering. `figures/stage5/forest_rank_by_fold.png` shows the ten leading mean ranks on each fold.
+That correlation uses all 76 features. Many have mean drops near zero, so their order changes from fold to fold. The first three do not. `koi_model_snr` and `koi_dikco_msky` stay in ranks 1–2, and `koi_dicco_msky` is rank 3 on every fold. From rank 4 downward the mean drop is about 0.002, the across-fold standard deviation is as large as the mean, and several features have a negative drop on at least one fold. Those mean ranks are not a stable ordering. `figures/person3/feature_importance/forest_rank_by_fold.png` shows the ten leading mean ranks on each fold.
 
 ## Impurity importance
 

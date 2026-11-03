@@ -38,8 +38,8 @@ from exoplanet.stage2 import (
     make_tree_pipeline,
 )
 
-STAGE3_RESULTS = ROOT / "results" / "stage3"
-STAGE3_FIGURES = ROOT / "figures" / "stage3"
+STAGE3_RESULTS = ROOT / "results" / "person3" / "decision_tree" / "stage3"
+STAGE3_FIGURES = ROOT / "figures" / "person3" / "decision_tree" / "stage3"
 
 STRUCTURAL_MAX_DEPTHS = [6, 7, 8, 9, 10, 12]
 STRUCTURAL_MIN_SAMPLES_SPLIT = [2, 10, 40]
@@ -500,7 +500,7 @@ def _write_findings(payload: dict, path: Path) -> None:
             "## Other evaluated configurations",
             "",
             "The five highest mean grouped validation macro-F1 values. The full grid is "
-            "`results/stage3/search_summary.csv`.",
+            "`results/person3/decision_tree/stage3/search_summary.csv`.",
             "",
             *top_lines,
             "",

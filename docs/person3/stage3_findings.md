@@ -56,7 +56,7 @@ Against the depth-8 tree, the selected configuration has higher validation macro
 
 ## Other evaluated configurations
 
-The five highest mean grouped validation macro-F1 values. The full grid is `results/stage3/search_summary.csv`.
+The five highest mean grouped validation macro-F1 values. The full grid is `results/person3/decision_tree/stage3/search_summary.csv`.
 
 | Model | Train accuracy | Validation accuracy | Train macro-F1 | Validation macro-F1 | Macro-F1 gap | Mean depth | Mean leaves |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |

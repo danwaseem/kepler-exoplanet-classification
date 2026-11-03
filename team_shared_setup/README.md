@@ -20,8 +20,8 @@ Local duplicate NASA CSV copies under `team_shared_setup/` are optional and are 
 | `data/processed/proposed_leakage_aware_features.csv` | Proposed 76 scientific features (package copy) |
 | `data/processed/column_audit.csv` | Column-by-column leakage and inclusion audit |
 | `data/processed/incomplete_koi_split_assignments.csv` | The 363 incomplete KOIs and their saved assignments |
-| `docs/STAGE1_DECISIONS.md` | Why those choices were made |
-| `docs/stage1_findings.md` | Counts produced from this table |
+| `docs/STAGE1_DECISIONS.md` | Why those choices were made (package copy; canonical: `../docs/shared/`) |
+| `docs/stage1_findings.md` | Counts produced from this table (package copy; canonical: `../docs/shared/`) |
 | `src/exoplanet/` | Loader, saved-split checks, and training-fold imputation |
 | `requirements.txt` | pandas, numpy, and scikit-learn |
 | `verify_shared_setup.py` | Read-only checksum, feature, and split checks |

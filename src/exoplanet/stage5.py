@@ -33,8 +33,8 @@ from exoplanet.stage2 import _load_inputs, development_only, make_tree_pipeline
 from exoplanet.stage3 import STAGE3_RESULTS
 from exoplanet.stage4 import STAGE4_RESULTS, make_forest_pipeline
 
-STAGE5_RESULTS = ROOT / "results" / "stage5"
-STAGE5_FIGURES = ROOT / "figures" / "stage5"
+STAGE5_RESULTS = ROOT / "results" / "person3" / "feature_importance"
+STAGE5_FIGURES = ROOT / "figures" / "person3" / "feature_importance"
 
 N_REPEATS = 10
 TOP_N = 15
@@ -680,7 +680,7 @@ def main() -> None:
         "changes from fold to fold. The first three do not: "
         + top3_text
         + ". From rank 4 downward, a mean rank is not stable when the across-fold standard "
-        "deviation is as large as the mean. `figures/stage5/forest_rank_by_fold.png` shows "
+        "deviation is as large as the mean. `figures/person3/feature_importance/forest_rank_by_fold.png` shows "
         "the ten leading mean ranks on each fold."
     )
     definitions = _definition_lines(forest_frame.nsmallest(10, "rank"), dictionary)

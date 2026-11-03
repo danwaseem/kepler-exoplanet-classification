@@ -58,7 +58,7 @@ Against the baseline forest, the tuned forest has higher validation macro-F1 on 
 
 ## Tuning summary
 
-The five forests with the highest mean grouped validation macro-F1. The full evaluated set is `results/stage4/rf_search_summary.csv`.
+The five forests with the highest mean grouped validation macro-F1. The full evaluated set is `results/person3/random_forest/rf_search_summary.csv`.
 
 | Configuration | Validation macro-F1 | Training macro-F1 | Macro-F1 gap | Fit seconds |
 | --- | ---: | ---: | ---: | ---: |

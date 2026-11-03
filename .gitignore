@@ -24,7 +24,7 @@ team_shared_setup/koi_cumulative_2026-10-06.csv
 team_shared_setup/data/raw/koi_cumulative_2026-10-06.csv
 
 # Large fitted forest binary (metrics and configs remain tracked)
-results/stage4/tuned_forest.joblib
+results/person3/random_forest/tuned_forest.joblib
 
 # Course assignment PDFs / personal reports (not needed to reproduce experiments)
 *.pdf

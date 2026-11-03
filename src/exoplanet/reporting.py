@@ -279,7 +279,7 @@ def _uncertainty_section(audit: pd.DataFrame) -> str:
         )
     lines.append("")
     lines.append(
-        "Full sentences for each decision are in `results/stage1/column_audit.csv`."
+        "Full sentences for each decision are in `results/shared/column_audit.csv`."
     )
     return "\n".join(lines)
 

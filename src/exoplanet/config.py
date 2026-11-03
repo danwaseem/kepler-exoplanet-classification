@@ -10,9 +10,9 @@ SOURCE_CSV = ROOT / RAW_FILENAME
 
 DATA_EXTERNAL = ROOT / "data" / "external"
 DATA_PROCESSED = ROOT / "data" / "processed"
-RESULTS = ROOT / "results" / "stage1"
-FIGURES = ROOT / "figures" / "eda"
-DOCS = ROOT / "docs"
+RESULTS = ROOT / "results" / "shared"
+FIGURES = ROOT / "figures" / "shared"
+DOCS = ROOT / "docs" / "shared"
 
 KOI_DICTIONARY_HTML = DATA_EXTERNAL / "koi_cumulative_columns.html"
 TCE_DICTIONARY_HTML = DATA_EXTERNAL / "kepler_tce_columns.html"

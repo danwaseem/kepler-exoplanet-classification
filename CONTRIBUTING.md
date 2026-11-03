@@ -27,8 +27,10 @@ Do not commit directly to `main` once the remote repository is shared.
 1. Push your feature branch.
 2. Open a pull request into `main`.
 3. Summarize models, hyperparameters, and development validation macro-F1.
-4. Link the result directory under `results/<owner>/`.
+4. Link the result directory under `results/person1/` … `results/person4/` (experiment code stays under `experiments/person*_…/`).
 5. Request review from at least one teammate for shared-code changes.
+
+Save metrics under `results/personN/<experiment_name>/`, figures under `figures/personN/`, and notes under `docs/personN/`. Shared Stage 1 material lives in `results/shared/`, `figures/shared/`, and `docs/shared/`.
 
 ## Shared-code policy
 

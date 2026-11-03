@@ -168,28 +168,28 @@ Each caption describes the saved figure. None of these figures uses the test par
 
 | File | Caption |
 | --- | --- |
-| `figures/eda/class_balance.png` | Disposition counts in the cumulative table. |
-| `figures/eda/missingness.png` | Missingness among columns considered for the learning matrix. |
-| `figures/eda/unfitted_block_by_disposition.png` | Disposition mix for rows with and without a measured transit depth. |
-| `figures/eda/feature_distributions_by_class.png` | Selected measurement distributions by archive disposition. |
-| `figures/eda/spearman_correlation.png` | Spearman correlations among a subset of development measurements. |
-| `figures/stage2/validation_curve.png` | Training and grouped validation macro-F1 against Decision Tree `max_depth`, including the unrestricted tree. |
-| `figures/stage2/oof_confusion_matrix.png` | Unrestricted tree, pooled development out-of-fold confusion matrix. |
-| `figures/stage3/ccp_alpha_curve.png` | Training and grouped validation performance against `ccp_alpha` for the unrestricted tree. |
-| `figures/stage3/model_comparison.png` | Training and grouped validation macro-F1 for the unrestricted tree, the depth-8 tree, and the pruned tree. |
-| `figures/stage4/model_comparison.png` | Training and grouped validation macro-F1 for the three trees, the baseline forest, and the tuned forest. |
-| `figures/stage4/oof_confusion_matrix.png` | Tuned forest, pooled development out-of-fold confusion matrix. |
-| `figures/stage5/forest_permutation_importance.png` | Fifteen largest tuned-forest permutation importances. Error bars are the standard deviation across the five validation folds. Pink bars are provisional centroid offsets. |
-| `figures/stage5/forest_impurity_importance.png` | Fifteen largest tuned-forest impurity importances, averaged over the training folds. |
-| `figures/stage5/forest_rank_by_fold.png` | Fold-by-fold permutation rank of the ten features with the highest mean forest importance. |
-| `figures/stage5/tree_vs_forest_permutation.png` | Mean permutation importance for features in either model's top ten. An asterisk marks a provisional centroid offset. |
-| `figures/stage5/top_feature_correlation.png` | Spearman correlation on development rows among the leading forest features and strongly associated partners. |
-| `figures/stage5b/validation_macro_f1.png` | Mean grouped validation macro-F1 for configurations A, B, and C. Error bars are the standard deviation across folds. |
-| `figures/stage5b/candidate_recall.png` | Mean grouped validation Candidate recall for configurations A, B, and C. |
-| `figures/stage5b/paired_macro_f1_differences.png` | Fold-level validation macro-F1 minus configuration A. Configuration C is diagnostic. |
-| `figures/stage5b/tree_confusion_A_vs_B.png` | Pruned tree, pooled development out-of-fold confusion matrices for the 76-feature set and the 56-feature sensitivity set. |
-| `figures/stage5b/forest_confusion_A_vs_B.png` | Tuned forest, pooled development out-of-fold confusion matrices for the 76-feature set and the 56-feature sensitivity set. |
-| `figures/stage5b/forest_confusion_A_vs_C_diagnostic.png` | Tuned forest, pooled development out-of-fold confusion matrices for the primary set and the diagnostic set that adds `koi_fwm_stat_sig`. |
+| `figures/shared/class_balance.png` | Disposition counts in the cumulative table. |
+| `figures/shared/missingness.png` | Missingness among columns considered for the learning matrix. |
+| `figures/shared/unfitted_block_by_disposition.png` | Disposition mix for rows with and without a measured transit depth. |
+| `figures/shared/feature_distributions_by_class.png` | Selected measurement distributions by archive disposition. |
+| `figures/shared/spearman_correlation.png` | Spearman correlations among a subset of development measurements. |
+| `figures/person3/decision_tree/stage2/validation_curve.png` | Training and grouped validation macro-F1 against Decision Tree `max_depth`, including the unrestricted tree. |
+| `figures/person3/decision_tree/stage2/oof_confusion_matrix.png` | Unrestricted tree, pooled development out-of-fold confusion matrix. |
+| `figures/person3/decision_tree/stage3/ccp_alpha_curve.png` | Training and grouped validation performance against `ccp_alpha` for the unrestricted tree. |
+| `figures/person3/decision_tree/stage3/model_comparison.png` | Training and grouped validation macro-F1 for the unrestricted tree, the depth-8 tree, and the pruned tree. |
+| `figures/person3/random_forest/model_comparison.png` | Training and grouped validation macro-F1 for the three trees, the baseline forest, and the tuned forest. |
+| `figures/person3/random_forest/oof_confusion_matrix.png` | Tuned forest, pooled development out-of-fold confusion matrix. |
+| `figures/person3/feature_importance/forest_permutation_importance.png` | Fifteen largest tuned-forest permutation importances. Error bars are the standard deviation across the five validation folds. Pink bars are provisional centroid offsets. |
+| `figures/person3/feature_importance/forest_impurity_importance.png` | Fifteen largest tuned-forest impurity importances, averaged over the training folds. |
+| `figures/person3/feature_importance/forest_rank_by_fold.png` | Fold-by-fold permutation rank of the ten features with the highest mean forest importance. |
+| `figures/person3/feature_importance/tree_vs_forest_permutation.png` | Mean permutation importance for features in either model's top ten. An asterisk marks a provisional centroid offset. |
+| `figures/person3/feature_importance/top_feature_correlation.png` | Spearman correlation on development rows among the leading forest features and strongly associated partners. |
+| `figures/person3/centroid_sensitivity/validation_macro_f1.png` | Mean grouped validation macro-F1 for configurations A, B, and C. Error bars are the standard deviation across folds. |
+| `figures/person3/centroid_sensitivity/candidate_recall.png` | Mean grouped validation Candidate recall for configurations A, B, and C. |
+| `figures/person3/centroid_sensitivity/paired_macro_f1_differences.png` | Fold-level validation macro-F1 minus configuration A. Configuration C is diagnostic. |
+| `figures/person3/centroid_sensitivity/tree_confusion_A_vs_B.png` | Pruned tree, pooled development out-of-fold confusion matrices for the 76-feature set and the 56-feature sensitivity set. |
+| `figures/person3/centroid_sensitivity/forest_confusion_A_vs_B.png` | Tuned forest, pooled development out-of-fold confusion matrices for the 76-feature set and the 56-feature sensitivity set. |
+| `figures/person3/centroid_sensitivity/forest_confusion_A_vs_C_diagnostic.png` | Tuned forest, pooled development out-of-fold confusion matrices for the primary set and the diagnostic set that adds `koi_fwm_stat_sig`. |
 
 ## Tables for the intermediate report
 
@@ -197,26 +197,26 @@ The stage findings files repeat these tables with the same numbers. The files be
 
 | File | Caption |
 | --- | --- |
-| `results/stage1/dataset_record.json` | Checksum, shape, source, and split settings for the cumulative table. |
-| `results/stage1/split_balance.json` | Row counts, host-star counts, and disposition shares by partition. |
-| `results/stage1/column_audit.csv` | Column-by-column include or exclude decision, with the column-page reason. |
+| `results/shared/dataset_record.json` | Checksum, shape, source, and split settings for the cumulative table. |
+| `results/shared/split_balance.json` | Row counts, host-star counts, and disposition shares by partition. |
+| `results/shared/column_audit.csv` | Column-by-column include or exclude decision, with the column-page reason. |
 | `data/processed/proposed_leakage_aware_features.csv` | The retained 76-feature primary list. |
 | `data/processed/proposed_splits.csv` | Saved `kepid` split and development fold for every KOI. |
-| `results/stage2/validation_curve.csv` | Depth-grid training and validation accuracy and macro-F1. |
-| `results/stage2/fold_metrics.csv` | Unrestricted-tree metrics on each development fold. |
-| `results/stage2/oof_confusion_matrix.csv` | Unrestricted-tree pooled out-of-fold confusion counts. |
-| `results/stage3/comparison_folds.csv` | Fold metrics for the unrestricted tree, the depth-8 tree, and the pruned tree. |
-| `results/stage3/ccp_curve.csv` | Shared `ccp_alpha` grid for the unrestricted tree. |
-| `results/stage3/search_summary.csv` | Evaluated tree configurations and their grouped validation scores. |
-| `results/stage4/comparison.csv` | Five-model means for accuracy, macro precision, macro recall, macro-F1, gap, and fit time. |
-| `results/stage4/comparison_folds.csv` | Fold metrics for the three trees and two forests. |
-| `results/stage4/per_class_metrics.csv` | Pooled out-of-fold precision, recall, and F1 by class. |
-| `results/stage4/oof_confusion_matrix.csv` | Tuned-forest pooled out-of-fold confusion counts. |
-| `results/stage4/rf_search_summary.csv` | The 25 evaluated forests. |
-| `results/stage5/forest_permutation_importance.csv` | Tuned-forest permutation and impurity importance for all 76 features. |
-| `results/stage5/tree_permutation_importance.csv` | Pruned-tree permutation and impurity importance for all 76 features. |
-| `results/stage5/correlated_pairs.csv` | Development-row feature pairs with absolute Spearman correlation of at least 0.7. |
-| `results/stage5b/summary.csv` | Mean grouped validation accuracy, macro-F1, and per-class recall for configurations A, B, and C. |
-| `results/stage5b/paired_differences.csv` | Fold-level differences from configuration A. |
-| `results/stage5b/oof_confusion.csv` | Pooled out-of-fold confusion counts for both models and all three configurations. |
-| `results/stage5b/fold_metrics.csv` | Fold accuracy, macro-F1, and per-class recall for both models and all three configurations. |
+| `results/person3/decision_tree/stage2/validation_curve.csv` | Depth-grid training and validation accuracy and macro-F1. |
+| `results/person3/decision_tree/stage2/fold_metrics.csv` | Unrestricted-tree metrics on each development fold. |
+| `results/person3/decision_tree/stage2/oof_confusion_matrix.csv` | Unrestricted-tree pooled out-of-fold confusion counts. |
+| `results/person3/decision_tree/stage3/comparison_folds.csv` | Fold metrics for the unrestricted tree, the depth-8 tree, and the pruned tree. |
+| `results/person3/decision_tree/stage3/ccp_curve.csv` | Shared `ccp_alpha` grid for the unrestricted tree. |
+| `results/person3/decision_tree/stage3/search_summary.csv` | Evaluated tree configurations and their grouped validation scores. |
+| `results/person3/random_forest/comparison.csv` | Five-model means for accuracy, macro precision, macro recall, macro-F1, gap, and fit time. |
+| `results/person3/random_forest/comparison_folds.csv` | Fold metrics for the three trees and two forests. |
+| `results/person3/random_forest/per_class_metrics.csv` | Pooled out-of-fold precision, recall, and F1 by class. |
+| `results/person3/random_forest/oof_confusion_matrix.csv` | Tuned-forest pooled out-of-fold confusion counts. |
+| `results/person3/random_forest/rf_search_summary.csv` | The 25 evaluated forests. |
+| `results/person3/feature_importance/forest_permutation_importance.csv` | Tuned-forest permutation and impurity importance for all 76 features. |
+| `results/person3/feature_importance/tree_permutation_importance.csv` | Pruned-tree permutation and impurity importance for all 76 features. |
+| `results/person3/feature_importance/correlated_pairs.csv` | Development-row feature pairs with absolute Spearman correlation of at least 0.7. |
+| `results/person3/centroid_sensitivity/summary.csv` | Mean grouped validation accuracy, macro-F1, and per-class recall for configurations A, B, and C. |
+| `results/person3/centroid_sensitivity/paired_differences.csv` | Fold-level differences from configuration A. |
+| `results/person3/centroid_sensitivity/oof_confusion.csv` | Pooled out-of-fold confusion counts for both models and all three configurations. |
+| `results/person3/centroid_sensitivity/fold_metrics.csv` | Fold accuracy, macro-F1, and per-class recall for both models and all three configurations. |

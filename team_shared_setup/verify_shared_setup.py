@@ -56,7 +56,7 @@ def _audit_path() -> Path:
     candidates = [
         DATA_PROCESSED / "column_audit.csv",
         RESULTS / "column_audit.csv",
-        WORK_ROOT / "results" / "stage1" / "column_audit.csv",
+        WORK_ROOT / "results" / "shared" / "column_audit.csv",
         PACKAGE_ROOT / "data" / "processed" / "column_audit.csv",
     ]
     for path in candidates:

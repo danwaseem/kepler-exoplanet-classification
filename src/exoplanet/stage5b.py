@@ -33,8 +33,8 @@ from exoplanet.stage3 import STAGE3_RESULTS, fold_agreement
 from exoplanet.stage4 import STAGE4_RESULTS, _classification_scores, make_forest_pipeline
 from exoplanet.stage5 import centroid_columns
 
-STAGE5B_RESULTS = ROOT / "results" / "stage5b"
-STAGE5B_FIGURES = ROOT / "figures" / "stage5b"
+STAGE5B_RESULTS = ROOT / "results" / "person3" / "centroid_sensitivity"
+STAGE5B_FIGURES = ROOT / "figures" / "person3" / "centroid_sensitivity"
 STAT_SIG = "koi_fwm_stat_sig"
 LEAKAGE = {
     "koi_pdisposition",

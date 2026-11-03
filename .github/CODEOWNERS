@@ -11,15 +11,24 @@
 /src/exoplanet/development.py
 /src/exoplanet/evaluation.py
 /data/processed/
+/results/shared/
+/figures/shared/
+/docs/shared/
 /tests/
 
 # Person 1 — Sanjana Reddy Katham (Logistic Regression, Naive Bayes)
 /src/exoplanet/models/person1_baselines/
 /experiments/person1_baselines/
+/results/person1/
+/figures/person1/
+/docs/person1/
 
 # Person 2 — Venkata Sai Bhavana Yarrapragada (KNN, SVM)
 /src/exoplanet/models/person2_knn_svm/
 /experiments/person2_knn_svm/
+/results/person2/
+/figures/person2/
+/docs/person2/
 
 # Person 3 — Danish Waseem (Decision Tree, Random Forest)
 /src/exoplanet/models/person3_trees/
@@ -29,17 +38,13 @@
 /src/exoplanet/stage5.py
 /src/exoplanet/stage5b.py
 /experiments/person3_trees/
-/results/stage2/
-/results/stage3/
-/results/stage4/
-/results/stage5/
-/results/stage5b/
-/figures/stage2/
-/figures/stage3/
-/figures/stage4/
-/figures/stage5/
-/figures/stage5b/
+/results/person3/
+/figures/person3/
+/docs/person3/
 
 # Person 4 — Nathan Pak (PCA, K-Means)
 /src/exoplanet/models/person4_pca_clustering/
 /experiments/person4_pca_clustering/
+/results/person4/
+/figures/person4/
+/docs/person4/

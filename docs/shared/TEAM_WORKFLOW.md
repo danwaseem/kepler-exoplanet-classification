@@ -2,14 +2,14 @@
 
 ## Ownership
 
-| Person | Models | Code | Experiments | Suggested branch |
-| --- | --- | --- | --- | --- |
-| 1 Sanjana Reddy Katham | Logistic Regression, Naive Bayes | `src/exoplanet/models/person1_baselines/` | `experiments/person1_baselines/` | `feature/logistic-naive-bayes` |
-| 2 Venkata Sai Bhavana Yarrapragada | KNN, SVM | `src/exoplanet/models/person2_knn_svm/` | `experiments/person2_knn_svm/` | `feature/knn-svm` |
-| 3 Danish Waseem | Decision Tree, Random Forest | `src/exoplanet/stage2.py`–`stage5b.py`, `models/person3_trees/` | `experiments/person3_trees/`, root `run_stage*.py` | `feature/decision-tree-random-forest` |
-| 4 Nathan Pak | PCA, K-Means | `src/exoplanet/models/person4_pca_clustering/` | `experiments/person4_pca_clustering/` | `feature/pca-clustering` |
+| Person | Models | Code | Experiments | Results / figures / docs | Suggested branch |
+| --- | --- | --- | --- | --- | --- |
+| 1 Sanjana Reddy Katham | Logistic Regression, Naive Bayes | `src/exoplanet/models/person1_baselines/` | `experiments/person1_baselines/` | `results|figures|docs/person1/` | `feature/logistic-naive-bayes` |
+| 2 Venkata Sai Bhavana Yarrapragada | KNN, SVM | `src/exoplanet/models/person2_knn_svm/` | `experiments/person2_knn_svm/` | `results|figures|docs/person2/` | `feature/knn-svm` |
+| 3 Danish Waseem | Decision Tree, Random Forest | `src/exoplanet/stage2.py`–`stage5b.py`, `models/person3_trees/` | `experiments/person3_trees/`, root `run_stage*.py` | `results|figures|docs/person3/` | `feature/decision-tree-random-forest` |
+| 4 Nathan Pak | PCA, K-Means | `src/exoplanet/models/person4_pca_clustering/` | `experiments/person4_pca_clustering/` | `results|figures|docs/person4/` | `feature/pca-clustering` |
 
-Shared modules: `config`, `io`, `audit`, `splits`, `preprocess`, `development`, `evaluation`.
+Shared modules: `config`, `io`, `audit`, `splits`, `preprocess`, `development`, `evaluation`. Shared Stage 1 outputs: `results/shared/`, `figures/shared/`, `docs/shared/`.
 
 ## Common preprocessing rules
 
@@ -39,7 +39,7 @@ def factory():
     ])
 
 summary = cross_validate_estimator(bundle, factory)
-write_experiment_results("person2_knn_svm", "baseline_knn", summary, {"model": "KNN"})
+write_experiment_results("person2", "baseline_knn", summary, {"model": "KNN"})
 ```
 
 ## Expected model output format
@@ -61,10 +61,10 @@ Report validation **macro-F1** as the primary comparison metric, with accuracy a
 1. Each person merges development results into `main` through a pull request.
 2. A later comparison notebook or script will read each owner's `summary.json`.
 3. Final test evaluation happens once, after the team agrees, using the locked split and without refitting on test labels during model selection.
-4. Person 3's Stages 1–5B metrics under `results/stage*/` are already the tree/forest development baseline.
+4. Person 3's Stages 2–5B metrics under `results/person3/` (`decision_tree/`, `random_forest/`, `feature_importance/`, `centroid_sensitivity/`) are the tree/forest development baseline. Stage 1 audits live under `results/shared/`.
 
 ## Centroid and diagnostic configurations
 
 - Primary scientific set: 76 features (includes provisional centroid offsets).
-- Sensitivity: 56 features without centroid offsets (`results/stage5b/`, configuration B).
+- Sensitivity: 56 features without centroid offsets (`results/person3/centroid_sensitivity/`, configuration B).
 - Diagnostic only: 76 features plus `koi_fwm_stat_sig` (configuration C). Not a production feature set.

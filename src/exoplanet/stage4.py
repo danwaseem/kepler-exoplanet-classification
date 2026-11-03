@@ -50,8 +50,8 @@ from exoplanet.stage2 import (
 )
 from exoplanet.stage3 import STAGE3_RESULTS, fold_agreement
 
-STAGE4_RESULTS = ROOT / "results" / "stage4"
-STAGE4_FIGURES = ROOT / "figures" / "stage4"
+STAGE4_RESULTS = ROOT / "results" / "person3" / "random_forest"
+STAGE4_FIGURES = ROOT / "figures" / "person3" / "random_forest"
 
 N_ESTIMATORS_GRID = [100, 200, 400]
 MAX_DEPTH_GRID = [None, 8, 12, 20]
@@ -576,7 +576,7 @@ def _write_findings(payload: dict, path: Path) -> None:
             "## Tuning summary",
             "",
             "The five forests with the highest mean grouped validation macro-F1. "
-            "The full evaluated set is `results/stage4/rf_search_summary.csv`.",
+            "The full evaluated set is `results/person3/random_forest/rf_search_summary.csv`.",
             "",
             *tuning,
             "",
