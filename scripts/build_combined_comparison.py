@@ -34,9 +34,9 @@ CONFIG_A = [
     ("PCA probe: PCA 25", "P4", "PCA information probe", P4 / "pca_25"),
 ]
 SAME = "same as A"
-RETUNED_LINEAR = "retuned (no fixed-params run exists)"
+RETUNED_LINEAR = "same as A (retuning chose the A settings: C=10, balanced)"
 # label -> (source, B settings). Configuration B reuses the A settings for every
-# model except Linear SVM, which has no fixed-params run.
+# model. Linear SVM has no fixed-params run, but its retuning chose the A settings.
 CONFIG_B = [
     ("Logistic regression", P1 / "e3_f56_no_centroid_lr_3class", SAME),
     ("Naive Bayes", P1 / "e3_f56_no_centroid_nb_3class", SAME),

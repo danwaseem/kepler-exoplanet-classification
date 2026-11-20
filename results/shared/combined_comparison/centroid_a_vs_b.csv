@@ -2,7 +2,7 @@ model,B_settings,macro_f1_A,macro_f1_B,diff_B_minus_A,folds_B_lower
 Logistic regression,same as A,0.7721,0.7192,-0.0528,5
 Naive Bayes,same as A,0.6699,0.6044,-0.0656,5
 KNN,same as A,0.7364,0.6301,-0.1063,5
-Linear SVM,retuned (no fixed-params run exists),0.7750,0.7069,-0.0681,5
+Linear SVM,"same as A (retuning chose the A settings: C=10, balanced)",0.7750,0.7069,-0.0681,5
 RBF SVM,same as A,0.7888,0.7296,-0.0592,5
 Pruned DT,same as A,0.7716,0.7203,-0.0513,5
 Random forest (tuned),same as A,0.8156,0.7634,-0.0522,5
