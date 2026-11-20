@@ -1,0 +1,38 @@
+{
+  "3class": {
+    "lr_l2": {
+      "model": "lr_l2",
+      "config": "C=1000"
+    },
+    "lr_l1": {
+      "model": "lr_l1",
+      "config": "C=1000"
+    },
+    "best_lr": {
+      "model": "lr_l2",
+      "config": "C=1000"
+    },
+    "best_nb": {
+      "model": "nb_b_signed_log",
+      "config": "-"
+    }
+  },
+  "binary": {
+    "lr_l2": {
+      "model": "lr_l2",
+      "config": "C=1000"
+    },
+    "lr_l1": {
+      "model": "lr_l1",
+      "config": "C=10"
+    },
+    "best_lr": {
+      "model": "lr_l2",
+      "config": "C=1000"
+    },
+    "best_nb": {
+      "model": "nb_b_signed_log",
+      "config": "-"
+    }
+  }
+}

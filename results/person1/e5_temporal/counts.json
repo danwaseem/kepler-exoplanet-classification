@@ -1,0 +1,16 @@
+{
+  "old_rows": 9564,
+  "test_partition_rows_dropped": 1911,
+  "rows_without_partition_dropped": 0,
+  "development_rows": 7653,
+  "development_rows_missing_old_depth_dropped": 272,
+  "training_rows_before_star_exclusion": 5625,
+  "training_rows_dropped_shared_star": 110,
+  "training_rows": 5515,
+  "training_rows_label_changed_since": 214,
+  "evaluation_rows": 464,
+  "evaluation_now_confirmed": 352,
+  "evaluation_now_false_positive": 112,
+  "training_old_confirmed": 1750,
+  "training_old_false_positive": 3765
+}

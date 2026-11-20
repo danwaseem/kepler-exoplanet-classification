@@ -1,0 +1,135 @@
+{
+  "setup": "binary",
+  "classes": [
+    "CONFIRMED",
+    "FALSE POSITIVE"
+  ],
+  "conventions": "fold_mean_sd: mean and SD (ddof=1) over the 5 saved development folds. pooled_oof: computed once on all out-of-fold predictions. Binary ROC-AUC, PR-AUC and Brier use P(CONFIRMED). 3-class ROC-AUC and PR-AUC are one-vs-rest macro; 3-class Brier is the multiclass Brier (sum over classes). Log loss clips at 1e-15 and is null where not applicable (dummy classifiers with 0/1 outputs).",
+  "log_loss_applicable": true,
+  "fold_mean_sd": {
+    "train_macro_f1": {
+      "mean": 0.9165962760232489,
+      "std": 0.0007958819504310844
+    },
+    "accuracy": {
+      "mean": 0.919202532635379,
+      "std": 0.014684902741799137
+    },
+    "balanced_accuracy": {
+      "mean": 0.9285226067705693,
+      "std": 0.013980060567150584
+    },
+    "mcc": {
+      "mean": 0.838050091478245,
+      "std": 0.02891886789408719
+    },
+    "cohen_kappa": {
+      "mean": 0.8324531161873574,
+      "std": 0.02997196621103418
+    },
+    "macro_precision": {
+      "mean": 0.9097428469741125,
+      "std": 0.015035927804145146
+    },
+    "macro_recall": {
+      "mean": 0.9285226067705693,
+      "std": 0.013980060567150584
+    },
+    "macro_f1": {
+      "mean": 0.9159454567318741,
+      "std": 0.015113214999393741
+    },
+    "weighted_precision": {
+      "mean": 0.92683110795153,
+      "std": 0.012966081030836593
+    },
+    "weighted_recall": {
+      "mean": 0.919202532635379,
+      "std": 0.014684902741799137
+    },
+    "weighted_f1": {
+      "mean": 0.9201206869897625,
+      "std": 0.01440813647979504
+    },
+    "precision_CONFIRMED": {
+      "mean": 0.8421106490761557,
+      "std": 0.024290772509653526
+    },
+    "recall_CONFIRMED": {
+      "mean": 0.965386109038713,
+      "std": 0.01594485289114953
+    },
+    "f1_CONFIRMED": {
+      "mean": 0.8994109987499723,
+      "std": 0.017702025299836385
+    },
+    "precision_FALSE_POSITIVE": {
+      "mean": 0.9773750448720693,
+      "std": 0.010376048268541292
+    },
+    "recall_FALSE_POSITIVE": {
+      "mean": 0.8916591045024255,
+      "std": 0.018413576941614773
+    },
+    "f1_FALSE_POSITIVE": {
+      "mean": 0.9324799147137763,
+      "std": 0.012546595354197278
+    },
+    "roc_auc": {
+      "mean": 0.971443478644977,
+      "std": 0.011092813592897285
+    },
+    "pr_auc": {
+      "mean": 0.9350055607211992,
+      "std": 0.020526699225532134
+    },
+    "brier": {
+      "mean": 0.0790806902960251,
+      "std": 0.014218776505863005
+    },
+    "ece_10bin": {
+      "mean": 0.07987861468977188,
+      "std": 0.01405382863433265
+    },
+    "log_loss": {
+      "mean": 1.7646419855643405,
+      "std": 0.37839751251615683
+    },
+    "macro_f1_gap": {
+      "mean": 0.0006508192913746269,
+      "std": 0.015257340427677226
+    },
+    "convergence_warnings": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "n_features_used": {
+      "mean": 76.0,
+      "std": 0.0
+    }
+  },
+  "pooled_oof": {
+    "accuracy": 0.9191626957113683,
+    "balanced_accuracy": 0.9284769948098194,
+    "mcc": 0.8377726551711632,
+    "cohen_kappa": 0.8323080720192702,
+    "macro_precision": 0.909510329757648,
+    "macro_recall": 0.9284769948098194,
+    "macro_f1": 0.9158904288334517,
+    "weighted_precision": 0.9266213421301522,
+    "weighted_recall": 0.9191626957113683,
+    "weighted_f1": 0.9200746389396401,
+    "precision_CONFIRMED": 0.8416666666666667,
+    "recall_CONFIRMED": 0.9654073736913974,
+    "f1_CONFIRMED": 0.8993004027983889,
+    "precision_FALSE_POSITIVE": 0.9773539928486293,
+    "recall_FALSE_POSITIVE": 0.8915466159282414,
+    "f1_FALSE_POSITIVE": 0.9324804548685146,
+    "roc_auc": 0.9711602332024334,
+    "pr_auc": 0.9346421545601669,
+    "brier": 0.0791206803550373,
+    "ece_10bin": 0.07952508289844992,
+    "log_loss": 1.7653664721090125
+  },
+  "test_scored": false
+}

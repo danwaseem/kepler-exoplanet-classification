@@ -1,0 +1,62 @@
+{
+  "n_candidates_scored": 1505,
+  "model": {
+    "model": "lr_l2",
+    "config": "C=1000",
+    "C": 1000.0,
+    "method": "isotonic",
+    "criterion": "lowest pooled out-of-fold Brier score among calibrated binary variants (log loss as tie-break)",
+    "brier_pooled": 0.03396233068350939,
+    "log_loss_pooled": 0.12871119400599976,
+    "pr_auc_pooled": 0.9773474174857038,
+    "path": "results/person1/e4_lr_l2_isotonic_binary"
+  },
+  "fitted_on": "5876 development CONFIRMED and FALSE POSITIVE rows, 76 features",
+  "band_counts": {
+    "high (>=0.9)": 238,
+    "likely (0.5-0.9)": 303,
+    "uncertain (0.1-0.5)": 361,
+    "low (<0.1)": 603
+  },
+  "expected_confirmed_if_calibrated": 563.993939,
+  "mean_p_calibrated": 0.3747468033222591,
+  "mean_p_uncalibrated": 0.43327474285714285,
+  "distinct_calibrated_values": 614,
+  "candidates_with_any_feature_outside_training_range": 11,
+  "high_band_with_any_feature_outside_training_range": 1,
+  "tie_break": "uncalibrated probability of the same model, then kepoi_name",
+  "spearman_calibrated_vs_uncalibrated": 0.9966107921761356,
+  "note": "Scores are a follow-up priority under a model trained on resolved KOIs. They are not dispositions. Calibration was measured on resolved KOIs; CANDIDATE objects may differ from them, so the probabilities are a guide.",
+  "split": {
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "expected_split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "n_split_rows": 9564,
+    "n_primary_features": 76,
+    "feature_list": "data/processed/proposed_leakage_aware_features.csv",
+    "split_file": "data/processed/proposed_splits.csv",
+    "id_column": "kepoi_name",
+    "group_column": "kepid",
+    "target_column": "koi_disposition",
+    "class_order": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "FALSE POSITIVE"
+    ],
+    "random_seed": 245,
+    "test_scored": false
+  },
+  "model_config": {
+    "model": "lr_l2",
+    "config": "C=1000",
+    "standardized": true,
+    "estimator": "LogisticRegression",
+    "penalty": "l2",
+    "C": 1000.0,
+    "solver": "lbfgs",
+    "class_weight": "balanced",
+    "max_iter": 20000,
+    "tol": 0.0001,
+    "random_state": null
+  },
+  "test_scored": false
+}
