@@ -33,14 +33,23 @@ CONFIG_A = [
     ("PCA probe: original 76", "P4", "PCA information probe", P4 / "original_76"),
     ("PCA probe: PCA 25", "P4", "PCA information probe", P4 / "pca_25"),
 ]
+SAME = "same as A"
+RETUNED_LINEAR = "retuned (no fixed-params run exists)"
+# label -> (source, B settings). Configuration B reuses the A settings for every
+# model except Linear SVM, which has no fixed-params run.
 CONFIG_B = [
-    ("Logistic regression", P1 / "e3_f56_no_centroid_lr_3class"),
-    ("Naive Bayes", P1 / "e3_f56_no_centroid_nb_3class"),
-    ("KNN", P2 / "knn_tuned_no_centroid"),
-    ("Linear SVM", P2 / "linear_svm_tuned_no_centroid"),
-    ("RBF SVM", P2 / "rbf_svm_tuned_no_centroid"),
-    ("Pruned DT", ("P3cen", "Pruned tree")),
-    ("Random forest (tuned)", ("P3cen", "Tuned forest")),
+    ("Logistic regression", P1 / "e3_f56_no_centroid_lr_3class", SAME),
+    ("Naive Bayes", P1 / "e3_f56_no_centroid_nb_3class", SAME),
+    ("KNN", P2 / "knn_tuned_no_centroid_fixed_params", SAME),
+    ("Linear SVM", P2 / "linear_svm_tuned_no_centroid", RETUNED_LINEAR),
+    ("RBF SVM", P2 / "rbf_svm_tuned_no_centroid_fixed_params", SAME),
+    ("Pruned DT", ("P3cen", "Pruned tree"), SAME),
+    ("Random forest (tuned)", ("P3cen", "Tuned forest"), SAME),
+]
+# Person 2 reference: retuned B next to fixed-settings B.
+P2_RETUNED_VS_FIXED = [
+    ("KNN", P2 / "knn_tuned_no_centroid", P2 / "knn_tuned_no_centroid_fixed_params"),
+    ("RBF SVM", P2 / "rbf_svm_tuned_no_centroid", P2 / "rbf_svm_tuned_no_centroid_fixed_params"),
 ]
 METRICS = ["validation_macro_f1", "validation_accuracy",
            "validation_macro_precision", "validation_macro_recall",
@@ -115,7 +124,7 @@ def main():
     data, fm = {}, {}
     for label, owner, sec, src in CONFIG_A:
         fm[label] = folds(src, "A")
-    for label, src in CONFIG_B:
+    for label, src, _ in CONFIG_B:
         if isinstance(src, tuple) or (src / "fold_metrics.csv").exists():
             data[label] = folds(src, "B")
         else:
@@ -169,18 +178,34 @@ def main():
 
     # 4. centroid
     cr = []
-    for label, src in CONFIG_B:
+    for label, src, b_settings in CONFIG_B:
         a = col(fm[label], "validation_macro_f1") if label in fm else None
         if a is None:
             a = col(folds([c[3] for c in CONFIG_A if c[0] == label][0], "A"), "validation_macro_f1")
         if data[label] is None:
-            cr.append([label, f(st.mean(a)), "not run", "not run", "not run"])
+            cr.append([label, b_settings, f(st.mean(a)), "not run", "not run", "not run"])
             continue
         b = col(data[label], "validation_macro_f1")
-        cr.append([label, f(st.mean(a)), f(st.mean(b)), f(st.mean(b) - st.mean(a), 4),
+        cr.append([label, b_settings, f(st.mean(a)), f(st.mean(b)), f(st.mean(b) - st.mean(a), 4),
                    sum(y < x for x, y in zip(a, b))])
     write("centroid_a_vs_b.csv",
-          ["model", "macro_f1_A", "macro_f1_B", "diff_B_minus_A", "folds_B_lower"], cr)
+          ["model", "B_settings", "macro_f1_A", "macro_f1_B", "diff_B_minus_A", "folds_B_lower"], cr)
+
+    # 4b. Person 2 retuned vs fixed, for reference
+    rf_rows = []
+    for label, retuned, fixed in P2_RETUNED_VS_FIXED:
+        a = col(fm[label], "validation_macro_f1")
+        rt = col(folds(retuned, "B"), "validation_macro_f1")
+        fx = col(folds(fixed, "B"), "validation_macro_f1")
+        rf_rows.append([label, f(st.mean(a)), f(st.mean(rt)), f(st.mean(fx)),
+                        f(st.mean(fx) - st.mean(rt), 4)])
+    write("centroid_p2_retuned_vs_fixed.csv",
+          ["model", "macro_f1_A", "macro_f1_B_retuned", "macro_f1_B_fixed_A_settings",
+           "diff_fixed_minus_retuned"], rf_rows)
+    for label, e in {"KNN": 0.6301, "RBF SVM": 0.7296}.items():
+        got = [float(r[3]) for r in cr if r[0] == label][0]
+        if abs(got - e) > 0.0005:
+            print(f"B MISMATCH {label}: expected about {e}, got {got:.4f}")
 
     # expected values
     exp = {"Random forest (tuned)": .8156, "RBF SVM": .7888, "Linear SVM": .7750,
