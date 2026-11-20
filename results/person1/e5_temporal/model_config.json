@@ -1,0 +1,45 @@
+{
+  "experiment": "E5 temporal validation",
+  "train": "old catalog CONFIRMED vs FALSE POSITIVE labels and old feature values, development-partition stars, measured old koi_depth, stars hosting an evaluation object removed",
+  "evaluation": "old catalog CANDIDATE objects now CONFIRMED or FALSE POSITIVE in the current table, old feature values, development-partition stars",
+  "sensitivity": "training rows whose old label differs from the current label removed",
+  "models": {
+    "LR lr_l2 C=1000": {
+      "kind": "lr_l2",
+      "C": 1000.0,
+      "method": null
+    },
+    "NB (b) signed log": {
+      "kind": "nb_b_signed_log",
+      "C": null,
+      "method": null
+    },
+    "lr_l2 C=1000 + isotonic calibration": {
+      "kind": "lr_l2",
+      "C": 1000.0,
+      "method": "isotonic"
+    }
+  },
+  "threshold": 0.5,
+  "kaggle_file": "experiments/person1_baselines/data/kaggle_cumulative.csv",
+  "kaggle_sha256": "b77f7332b7fe9fbc5ce4650b7d9f7aea035082ddd2b5701039eaadad2396db65",
+  "split": {
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "expected_split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "n_split_rows": 9564,
+    "n_primary_features": 76,
+    "feature_list": "data/processed/proposed_leakage_aware_features.csv",
+    "split_file": "data/processed/proposed_splits.csv",
+    "id_column": "kepoi_name",
+    "group_column": "kepid",
+    "target_column": "koi_disposition",
+    "class_order": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "FALSE POSITIVE"
+    ],
+    "random_seed": 245,
+    "test_scored": false
+  },
+  "test_scored": false
+}

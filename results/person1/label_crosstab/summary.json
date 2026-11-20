@@ -1,0 +1,28 @@
+{
+  "all_kois": {
+    "matched_kois": 9564,
+    "label_changed": 925,
+    "old_candidate_resolved": 591,
+    "old_candidate_to_confirmed": 443,
+    "old_candidate_to_false_positive": 148,
+    "old_candidate_still_candidate": 1657,
+    "old_false_positive_to_candidate": 320,
+    "old_false_positive_to_confirmed": 13,
+    "old_confirmed_to_false_positive": 1,
+    "old_confirmed_to_candidate": 0
+  },
+  "development_partition": {
+    "matched_kois": 7653,
+    "label_changed": 725,
+    "old_candidate_resolved": 468,
+    "old_candidate_to_confirmed": 353,
+    "old_candidate_to_false_positive": 115,
+    "old_candidate_still_candidate": 1337,
+    "old_false_positive_to_candidate": 245,
+    "old_false_positive_to_confirmed": 11,
+    "old_confirmed_to_false_positive": 1,
+    "old_confirmed_to_candidate": 0
+  },
+  "note": "Label counts only; no model is fit or scored here. The all-KOI table repeats the earlier comparison; the development-partition table is what E5 draws on.",
+  "kaggle_file": "experiments/person1_baselines/data/kaggle_cumulative.csv"
+}

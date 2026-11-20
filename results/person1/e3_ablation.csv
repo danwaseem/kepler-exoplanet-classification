@@ -1,0 +1,13 @@
+table,setup,model,config,feature_set,val_macro_f1_mean,val_macro_f1_sd,diagnostic_only
+e3_ablation,3class,lr_l2,C=1000,F76,0.7720510780678856,0.013731314562525385,False
+e3_ablation,3class,lr_l2,C=1000,F56,0.7192074145160684,0.006004340746939661,False
+e3_ablation,3class,lr_l2,C=1000,F76_plus_leakage,0.9969938901393173,0.0008186752405049219,True
+e3_ablation,3class,nb_b_signed_log,-,F76,0.6699453226432952,0.02051004250981519,False
+e3_ablation,3class,nb_b_signed_log,-,F56,0.604355469074054,0.016691693496894994,False
+e3_ablation,3class,nb_b_signed_log,-,F76_plus_leakage,0.9989225856477872,0.0009514948564491087,True
+e3_ablation,binary,lr_l2,C=1000,F76,0.9516345712155527,0.004106556167562333,False
+e3_ablation,binary,lr_l2,C=1000,F56,0.9167182157606263,0.00675537076411459,False
+e3_ablation,binary,lr_l2,C=1000,F76_plus_leakage,0.9978144425689269,0.0018982476199758944,True
+e3_ablation,binary,nb_b_signed_log,-,F76,0.9159454567318741,0.015113214999393741,False
+e3_ablation,binary,nb_b_signed_log,-,F56,0.8302508468243495,0.010381748439983572,False
+e3_ablation,binary,nb_b_signed_log,-,F76_plus_leakage,0.9990879262205565,0.001119580425168695,True

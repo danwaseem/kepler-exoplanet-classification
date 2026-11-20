@@ -1,0 +1,11 @@
+{
+  "model": "lr_l2",
+  "config": "C=1000",
+  "C": 1000.0,
+  "method": "isotonic",
+  "criterion": "lowest pooled out-of-fold Brier score among calibrated binary variants (log loss as tie-break)",
+  "brier_pooled": 0.03396233068350939,
+  "log_loss_pooled": 0.12871119400599976,
+  "pr_auc_pooled": 0.9773474174857038,
+  "path": "results/person1/e4_lr_l2_isotonic_binary"
+}

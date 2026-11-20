@@ -1,0 +1,79 @@
+{
+  "setup": "binary",
+  "setup_description": "binary vetting setup: CONFIRMED vs FALSE POSITIVE, CANDIDATE rows dropped; macro scores average over these two classes only",
+  "classes": [
+    "CONFIRMED",
+    "FALSE POSITIVE"
+  ],
+  "confusion_matrix": [
+    [
+      1936,
+      0,
+      261
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      274,
+      0,
+      3405
+    ]
+  ],
+  "split": {
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "expected_split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "n_split_rows": 9564,
+    "n_primary_features": 76,
+    "feature_list": "data/processed/proposed_leakage_aware_features.csv",
+    "split_file": "data/processed/proposed_splits.csv",
+    "id_column": "kepoi_name",
+    "group_column": "kepid",
+    "target_column": "koi_disposition",
+    "class_order": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "FALSE POSITIVE"
+    ],
+    "random_seed": 245,
+    "test_scored": false
+  },
+  "n_features": 29,
+  "n_rows": 5876,
+  "test_scored": false,
+  "binary_confusion_matrix": {
+    "labels": [
+      "CONFIRMED",
+      "FALSE POSITIVE"
+    ],
+    "matrix": [
+      [
+        1936,
+        261
+      ],
+      [
+        274,
+        3405
+      ]
+    ]
+  },
+  "mean_train_accuracy": 0.911971327675673,
+  "std_train_accuracy": 0.0010457008659244993,
+  "mean_validation_accuracy": 0.9089542622496205,
+  "std_validation_accuracy": 0.006578491066130839,
+  "mean_train_macro_f1": 0.9060140979247746,
+  "std_train_macro_f1": 0.0008796608893556672,
+  "mean_validation_macro_f1": 0.9028899182092026,
+  "std_validation_macro_f1": 0.006713013467793689,
+  "mean_train_macro_precision": 0.9059611169994426,
+  "std_train_macro_precision": 0.0018837343786637908,
+  "mean_validation_macro_precision": 0.9026532327008692,
+  "std_validation_macro_precision": 0.008115020851926174,
+  "mean_train_macro_recall": 0.9061157892777528,
+  "std_train_macro_recall": 0.0008473618530660145,
+  "mean_validation_macro_recall": 0.903363631561442,
+  "std_validation_macro_recall": 0.005877013251986827,
+  "mean_macro_f1_gap": 0.0031241797155719953
+}
