@@ -1,0 +1,8 @@
+model,macro_f1_A,macro_f1_B,diff_B_minus_A,folds_B_lower
+Logistic regression,0.7721,0.7192,-0.0528,5
+Naive Bayes,0.6699,0.6044,-0.0656,5
+KNN,0.7364,0.6358,-0.1006,5
+Linear SVM,0.7750,0.7069,-0.0681,5
+RBF SVM,0.7888,0.7316,-0.0571,5
+Pruned DT,0.7716,0.7203,-0.0513,5
+Random forest (tuned),0.8156,0.7634,-0.0522,5
