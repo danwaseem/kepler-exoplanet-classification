@@ -38,7 +38,7 @@ def load_models():
     models = {"Pruned Decision Tree": joblib.load(TREE)}
     forest = next((p for p in (FOREST_SMALL, FOREST_FULL) if p.exists()), None)
     if forest is None:
-        print("Random Forest file not found. Download from <Google Drive link> into")
+        print("Random Forest file not found. Download from https://drive.google.com/file/d/1Clgn72n5EUQBIArY1r1FPTxTMRtEPA_I/view?usp=sharing into")
         print("results/person3/random_forest/ and run again. Running with the tree only.\n")
     else:
         models["Random Forest"] = joblib.load(forest)

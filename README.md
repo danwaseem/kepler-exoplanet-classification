@@ -131,7 +131,11 @@ python demo/predict_koi.py --sample 5
 
 For each KOI the output shows the name, the true disposition, each model's prediction (marked correct or wrong), and its class probabilities. At the end it prints one line per model, such as "3 of 5 correct", and confirms that the predictions match `results/final_test/test_predictions.csv`.
 
-The saved Random Forest file (`results/person3/random_forest/tuned_forest.joblib`, about 10 MB) is not stored in the repository. If it is missing, the demo says so and runs with the Decision Tree only.
+The Random Forest file (tuned_forest.joblib, 10,273,308 bytes, about 10.3 MB) is stored on Google Drive because it is over the 2 MB Canvas limit. Compressed, it is still 2.56 MB. Download it into `results/person3/random_forest/` before running the demo. The pruned Decision Tree file (11,979 bytes) is in the repository.
+
+Download link: https://drive.google.com/file/d/1Clgn72n5EUQBIArY1r1FPTxTMRtEPA_I/view?usp=sharing
+
+If the forest file is missing, the demo says so and runs with the Decision Tree only.
 
 ## Shared preprocessing and evaluation
 
