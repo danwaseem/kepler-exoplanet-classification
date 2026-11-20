@@ -1,0 +1,3 @@
+model_a,model_b,a_right_b_wrong,a_wrong_b_right,n_discordant,p_value,test
+Random Forest,RBF SVM,112,74,186,0.006512203250161631,"exact binomial, two-sided"
+Random Forest,Logistic Regression,143,52,195,5.156491358468165e-11,"exact binomial, two-sided"

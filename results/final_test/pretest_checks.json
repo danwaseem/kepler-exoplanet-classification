@@ -1,0 +1,122 @@
+{
+  "identity": {
+    "dataset_sha256": "a85348f20082d24fb14d4a05a9a44c644b801998fad7cec36f8980eb1f0a69ab",
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a"
+  },
+  "versions": {
+    "pandas": {
+      "pinned": "3.1.0",
+      "installed": "3.1.0"
+    },
+    "numpy": {
+      "pinned": "2.5.4",
+      "installed": "2.5.4"
+    },
+    "scikit-learn": {
+      "pinned": "1.9.1",
+      "installed": "1.9.1"
+    },
+    "matplotlib": {
+      "pinned": "3.11.2",
+      "installed": "3.11.2"
+    },
+    "seaborn": {
+      "pinned": "0.13.2",
+      "installed": "0.13.2"
+    },
+    "joblib": {
+      "pinned": "1.6.0",
+      "installed": "1.6.0"
+    },
+    "pytest": {
+      "pinned": "9.2.0",
+      "installed": "9.2.0"
+    }
+  },
+  "counts": {
+    "dev_primary": 7381,
+    "test_total": 1911,
+    "test_primary": 1820,
+    "test_without_depth_in_splits": 91,
+    "test_without_depth_in_incomplete_file": 91,
+    "matrix_partition_counts": {
+      "development": 7381,
+      "test": 1820
+    }
+  },
+  "decision_tree_check": {
+    "root_n_node_samples": 7381,
+    "n_features_in": 76
+  },
+  "random_forest_check": {
+    "n_features_in": 76,
+    "refit_predictions_match_saved": true,
+    "n_rows_compared": 7381
+  },
+  "smoke_test": [
+    {
+      "model": "Random Forest",
+      "smoke_fold0_macro_f1": 0.8243003544258775,
+      "saved_fold0_macro_f1": 0.8243003544258775,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "predict_proba"
+    },
+    {
+      "model": "RBF SVM",
+      "smoke_fold0_macro_f1": 0.7838847242544382,
+      "saved_fold0_macro_f1": 0.7838847242544382,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "decision_function"
+    },
+    {
+      "model": "Linear SVM",
+      "smoke_fold0_macro_f1": 0.7663349349107037,
+      "saved_fold0_macro_f1": 0.7663349349107037,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "decision_function"
+    },
+    {
+      "model": "Logistic Regression",
+      "smoke_fold0_macro_f1": 0.7655664714188898,
+      "saved_fold0_macro_f1": 0.7655664714188898,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "predict_proba"
+    },
+    {
+      "model": "Pruned Decision Tree",
+      "smoke_fold0_macro_f1": 0.7808886829850524,
+      "saved_fold0_macro_f1": 0.7808886829850524,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "predict_proba"
+    },
+    {
+      "model": "KNN",
+      "smoke_fold0_macro_f1": 0.7374825291550456,
+      "saved_fold0_macro_f1": 0.7374825291550456,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "predict_proba"
+    },
+    {
+      "model": "Naive Bayes",
+      "smoke_fold0_macro_f1": 0.6855257386851049,
+      "saved_fold0_macro_f1": 0.6855257386851049,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "predict_proba"
+    },
+    {
+      "model": "Majority baseline",
+      "smoke_fold0_macro_f1": 0.22182308037718904,
+      "saved_fold0_macro_f1": 0.22182308037718904,
+      "difference": 0.0,
+      "within_tolerance": true,
+      "score_type": "predict_proba"
+    }
+  ]
+}
