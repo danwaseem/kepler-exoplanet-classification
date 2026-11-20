@@ -1,0 +1,3 @@
+model,roc_auc_ovr_macro,score_type,method,rows_differing_from_original_predictions
+RBF SVM,0.924943977595695,decision_function,macro mean of per-class one-vs-rest binary ROC-AUC,0
+Linear SVM,0.9114062652329392,decision_function,macro mean of per-class one-vs-rest binary ROC-AUC,0
