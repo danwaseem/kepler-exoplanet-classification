@@ -37,7 +37,7 @@ The two PCA rows are an information probe by Person 4, not competing models. The
 
 ## c. Paired development comparisons
 
-Source: `results/shared/combined_comparison/paired_folds.csv`. Difference is model A minus model B on the same 5 folds. The p-value is the file's corrected resampled t-test (`nb_two_sided_p`). With 5 folds these are descriptive, not final tests.
+Source: `results/shared/combined_comparison/paired_folds.csv`. Difference is model A minus model B on the same 5 folds. The p-value (column `nb_two_sided_p`) is from the Nadeau-Bengio corrected resampled t-test (5 folds, 4 degrees of freedom). With 5 folds these are descriptive, not final tests.
 
 | Model A | Model B | Metric | Mean diff | Min | Max | Folds A higher | p |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -66,7 +66,7 @@ Source: `results/shared/combined_comparison/centroid_a_vs_b.csv`. Configuration 
 
 Every model is lower without the 20 centroid columns on all 5 folds. The drop in macro-F1 is 0.051 to 0.106.
 
-These columns are Kepler Data Validation diagnostics. So the models reproduce the archive disposition using vetting-diagnostic measurements, not transit data alone.
+These columns measure how far the center of light moves during transit (flux-weighted centroids) and where the transit source sits in difference images (PRF centroids). NASA's column definitions (`data/external/koi_cumulative_columns.html`) say the centroid offset false-positive flag, `koi_fpflag_co`, is inferred from this kind of in-transit vs out-of-transit centroid measurement. The flag itself is excluded from the features, but these underlying measurements are kept. So the models reproduce the archive disposition using vetting-diagnostic measurements, not transit data alone.
 
 A second table, `results/shared/combined_comparison/centroid_p2_retuned_vs_fixed.csv`, compares Person 2's retuned and fixed-settings values for reference.
 
@@ -161,7 +161,7 @@ Source: `results/final_test/metrics_summary.csv`. The development value is the m
 
 ## g. Label changes between catalog versions
 
-Source: `results/person1/label_crosstab/summary.json` (all KOIs). The counts compare the labels in an older catalog version (the `kaggle_file` named in the source) with the labels in this project's dataset.
+Source: `results/person1/label_crosstab/summary.json` (all KOIs). The counts compare the labels in an older copy of the KOI cumulative table distributed on Kaggle (`experiments/person1_baselines/data/kaggle_cumulative.csv`) with the labels in this project's dataset.
 
 - 925 labels changed among 9,564 KOIs.
 - 591 of these were old candidates that were resolved: 443 to CONFIRMED and 148 to FALSE POSITIVE.

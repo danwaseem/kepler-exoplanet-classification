@@ -4,7 +4,7 @@ DATA 245 group project at San José State University.
 
 **Objective:** Compare classical machine learning algorithms for classifying NASA Kepler Objects of Interest (KOI) as CONFIRMED, CANDIDATE, or FALSE POSITIVE.
 
-This repository is a shared team workspace. Four members implement different methods in parallel, using the same dataset, feature proposal, host-star grouped splits, and evaluation helpers. Individual model results are not the final project outcome until the group compares them and agrees on next steps.
+This repository is a shared team workspace. Four members implement different methods in parallel, using the same dataset, feature proposal, host-star grouped splits, and evaluation helpers. The group compared all results on the same folds and ran one final test under a written protocol. See Current project status.
 
 GitHub: [danwaseem/kepler-exoplanet-classification](https://github.com/danwaseem/kepler-exoplanet-classification)
 
