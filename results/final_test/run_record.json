@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-11-20T22:43:09+00:00",
+  "git": {
+    "commit": "b3cbb6789052af9899704280c0817ac2abe39bb3",
+    "branch": "analysis/final-test",
+    "tree_dirty_outside_results_final_test": false
+  },
+  "dataset_sha256": "a85348f20082d24fb14d4a05a9a44c644b801998fad7cec36f8980eb1f0a69ab",
+  "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+  "random_seed": 245,
+  "n_features": 76,
+  "n_train_rows": 7381,
+  "n_test_rows": 1820,
+  "saved_pipeline_sha256": {
+    "results/person3/random_forest/tuned_forest.joblib": "92edffa83a5c1277647c60ab77c85090c6b89d563c94f5b9691913f00cb23bd6",
+    "results/person3/decision_tree/stage3/selected_development_tree.joblib": "382ca51dd6fcf38661603bc17e4d2e61dca1c7c101c1556597c44ab745d47b2e"
+  },
+  "library_versions": {
+    "pandas": {
+      "pinned": "3.1.0",
+      "installed": "3.1.0"
+    },
+    "numpy": {
+      "pinned": "2.5.4",
+      "installed": "2.5.4"
+    },
+    "scikit-learn": {
+      "pinned": "1.9.1",
+      "installed": "1.9.1"
+    },
+    "matplotlib": {
+      "pinned": "3.11.2",
+      "installed": "3.11.2"
+    },
+    "seaborn": {
+      "pinned": "0.13.2",
+      "installed": "0.13.2"
+    },
+    "joblib": {
+      "pinned": "1.6.0",
+      "installed": "1.6.0"
+    },
+    "pytest": {
+      "pinned": "9.2.0",
+      "installed": "9.2.0"
+    }
+  },
+  "python": "3.14.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "command": "python scripts/run_final_test.py --run"
+}

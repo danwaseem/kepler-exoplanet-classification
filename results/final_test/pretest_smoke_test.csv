@@ -1,0 +1,9 @@
+model,smoke_fold0_macro_f1,saved_fold0_macro_f1,difference,within_tolerance,score_type
+Random Forest,0.8243003544258775,0.8243003544258775,0.0,True,predict_proba
+RBF SVM,0.7838847242544382,0.7838847242544382,0.0,True,decision_function
+Linear SVM,0.7663349349107037,0.7663349349107037,0.0,True,decision_function
+Logistic Regression,0.7655664714188898,0.7655664714188898,0.0,True,predict_proba
+Pruned Decision Tree,0.7808886829850524,0.7808886829850524,0.0,True,predict_proba
+KNN,0.7374825291550456,0.7374825291550456,0.0,True,predict_proba
+Naive Bayes,0.6855257386851049,0.6855257386851049,0.0,True,predict_proba
+Majority baseline,0.22182308037718904,0.22182308037718904,0.0,True,predict_proba
