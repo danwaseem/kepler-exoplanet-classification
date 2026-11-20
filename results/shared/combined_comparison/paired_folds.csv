@@ -1,0 +1,9 @@
+model_a,model_b,metric,diff_fold0,diff_fold1,diff_fold2,diff_fold3,diff_fold4,mean_diff,min_diff,max_diff,folds_a_higher,nb_corrected_t,nb_two_sided_p
+Random forest (tuned),RBF SVM,validation_macro_f1,0.04042,0.02189,0.01918,0.02916,0.02351,0.02683,0.01918,0.04042,5,4.749,0.0090
+Random forest (tuned),RBF SVM,validation_accuracy,0.03567,0.02161,0.02161,0.03197,0.02529,0.02723,0.02161,0.03567,5,6.405,0.0031
+Random forest (tuned),Logistic regression,validation_macro_f1,0.05873,0.04064,0.03853,0.04556,0.03437,0.04357,0.03437,0.05873,5,6.917,0.0023
+Random forest (tuned),Logistic regression,validation_accuracy,0.06326,0.04997,0.04254,0.05578,0.04306,0.05092,0.04254,0.06326,5,8.640,0.0010
+RBF SVM,Logistic regression,validation_macro_f1,0.01832,0.01874,0.01934,0.01641,0.01085,0.01673,0.01085,0.01934,5,7.198,0.0020
+RBF SVM,Logistic regression,validation_accuracy,0.02759,0.02836,0.02093,0.02381,0.01777,0.02369,0.01777,0.02836,5,7.914,0.0014
+Pruned DT,Logistic regression,validation_macro_f1,0.01532,0.00253,-0.01424,-0.00884,0.00302,-0.00044,-0.01424,0.01532,3,-0.057,0.9572
+Pruned DT,Logistic regression,validation_accuracy,0.02894,0.02701,0.01350,0.01565,0.02187,0.02139,0.01350,0.02894,5,4.703,0.0093
