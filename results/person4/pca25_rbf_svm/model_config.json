@@ -1,0 +1,38 @@
+{
+  "model": "PCA + RBF SVM",
+  "standardized": true,
+  "hyperparameters": {
+    "C": 10.0,
+    "gamma": "scale",
+    "class_weight": "balanced"
+  },
+  "configuration": "A",
+  "description": "PCA (25 components, 90% variance) + RBF SVM with person2's tuned configuration-A settings (76 features)",
+  "n_features": 76,
+  "n_pca_components": 25,
+  "preprocessing": "signed-log (|skew|>3 on training fold) -> median impute -> standardize, all fit on training fold",
+  "imputation": "median, fit on training fold",
+  "selection_metric": "none (fixed settings; PCA size = 90% explained variance)",
+  "owner": "person4",
+  "experiment_name": "pca25_rbf_svm",
+  "test_scored": false,
+  "split": {
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "expected_split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "n_split_rows": 9564,
+    "n_primary_features": 76,
+    "feature_list": "data/processed/proposed_leakage_aware_features.csv",
+    "split_file": "data/processed/proposed_splits.csv",
+    "id_column": "kepoi_name",
+    "group_column": "kepid",
+    "target_column": "koi_disposition",
+    "class_order": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "FALSE POSITIVE"
+    ],
+    "random_seed": 245,
+    "test_scored": false
+  },
+  "roc_auc_note": "SVM ROC-AUC from softmax of one-vs-rest decision scores (no Platt scaling)"
+}
