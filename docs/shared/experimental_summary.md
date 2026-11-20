@@ -161,7 +161,7 @@ Source: `results/final_test/metrics_summary.csv`. The development value is the m
 
 ## g. Label changes between catalog versions
 
-Source: `results/person1/label_crosstab/summary.json` (all KOIs). The table compares the older catalog labels with the labels in this project's dataset.
+Source: `results/person1/label_crosstab/summary.json` (all KOIs). The counts compare the labels in an older catalog version (the `kaggle_file` named in the source) with the labels in this project's dataset.
 
 - 925 labels changed among 9,564 KOIs.
 - 591 of these were old candidates that were resolved: 443 to CONFIRMED and 148 to FALSE POSITIVE.
