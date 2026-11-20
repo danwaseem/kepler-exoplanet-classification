@@ -1,0 +1,19 @@
+features,model,scaling,macro_F1,F1_std,accuracy,fold_F1,seconds
+All 76,KNN (k=5),None,0.6068898271813167,0.0130066197363278,0.6573609716595601,"[np.float64(0.586), np.float64(0.622), np.float64(0.612), np.float64(0.616), np.float64(0.599)]",1.6
+All 76,KNN (k=5),StandardScaler,0.7312607314511868,0.012440309964157806,0.7710577254083075,"[np.float64(0.719), np.float64(0.725), np.float64(0.742), np.float64(0.721), np.float64(0.75)]",0.3
+All 76,KNN (k=5),MinMaxScaler,0.7065361298486099,0.011096706246412125,0.7537943713909073,"[np.float64(0.726), np.float64(0.696), np.float64(0.708), np.float64(0.708), np.float64(0.695)]",0.4
+All 76,SVM RBF,None,0.262673150263958,0.08191427052621386,0.5147763361667738,"[np.float64(0.222), np.float64(0.426), np.float64(0.223), np.float64(0.221), np.float64(0.222)]",7.9
+All 76,SVM RBF,StandardScaler,0.7782289670554781,0.010469123648894348,0.8216065983549001,"[np.float64(0.768), np.float64(0.767), np.float64(0.775), np.float64(0.79), np.float64(0.791)]",4.1
+All 76,SVM RBF,MinMaxScaler,0.6732063585410496,0.02818934619653067,0.7526214515038692,"[np.float64(0.709), np.float64(0.669), np.float64(0.625), np.float64(0.693), np.float64(0.669)]",5.3
+All 76,SVM Linear,None,0.6032585096843655,0.0035606028062828434,0.7272584926098595,"[np.float64(0.605), np.float64(0.609), np.float64(0.602), np.float64(0.6), np.float64(0.6)]",33.3
+All 76,SVM Linear,StandardScaler,0.7654115577724911,0.003623327855889259,0.8149272449786424,"[np.float64(0.768), np.float64(0.758), np.float64(0.768), np.float64(0.765), np.float64(0.767)]",12.8
+All 76,SVM Linear,MinMaxScaler,0.7423017239848455,0.004506966983349673,0.7966296609159647,"[np.float64(0.746), np.float64(0.744), np.float64(0.738), np.float64(0.736), np.float64(0.747)]",0.9
+No centroid (56),KNN (k=5),None,0.6068358811470964,0.012808309988290955,0.6578978311205969,"[np.float64(0.587), np.float64(0.62), np.float64(0.612), np.float64(0.618), np.float64(0.597)]",0.4
+No centroid (56),KNN (k=5),StandardScaler,0.6358207281242992,0.004836666503893053,0.6963758675832542,"[np.float64(0.643), np.float64(0.629), np.float64(0.638), np.float64(0.636), np.float64(0.632)]",0.4
+No centroid (56),KNN (k=5),MinMaxScaler,0.6115855597243339,0.0024483992636445155,0.6756535161563844,"[np.float64(0.614), np.float64(0.607), np.float64(0.613), np.float64(0.613), np.float64(0.611)]",0.4
+No centroid (56),SVM RBF,None,0.2627855520007478,0.08213906998413044,0.5149113800560378,"[np.float64(0.222), np.float64(0.427), np.float64(0.223), np.float64(0.221), np.float64(0.222)]",6.9
+No centroid (56),SVM RBF,StandardScaler,0.6628302892489406,0.008570659831844312,0.7522014531497314,"[np.float64(0.67), np.float64(0.666), np.float64(0.646), np.float64(0.664), np.float64(0.668)]",4.3
+No centroid (56),SVM RBF,MinMaxScaler,0.5153704313088293,0.0074093918807696755,0.6877308072647506,"[np.float64(0.515), np.float64(0.518), np.float64(0.503), np.float64(0.526), np.float64(0.515)]",4.9
+No centroid (56),SVM Linear,None,0.5730139026551683,0.004228737742713467,0.6935323764877753,"[np.float64(0.573), np.float64(0.58), np.float64(0.567), np.float64(0.572), np.float64(0.573)]",16.0
+No centroid (56),SVM Linear,StandardScaler,0.6573714196731177,0.011072722083512468,0.7529885570949398,"[np.float64(0.666), np.float64(0.672), np.float64(0.649), np.float64(0.658), np.float64(0.642)]",8.4
+No centroid (56),SVM Linear,MinMaxScaler,0.602522662440094,0.011725013403759138,0.7227893626049794,"[np.float64(0.615), np.float64(0.615), np.float64(0.583), np.float64(0.598), np.float64(0.601)]",0.7

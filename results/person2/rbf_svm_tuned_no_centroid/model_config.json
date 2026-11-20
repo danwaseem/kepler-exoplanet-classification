@@ -1,0 +1,35 @@
+{
+  "model": "RBF SVM",
+  "standardized": true,
+  "hyperparameters": {
+    "C": 30.0,
+    "gamma": 0.01,
+    "class_weight": "balanced"
+  },
+  "configuration": "B",
+  "description": "without provisional centroid offsets (56 features), retuned",
+  "n_features": 56,
+  "imputation": "median, fit on training fold",
+  "selection_metric": "grouped 5-fold validation macro-F1",
+  "owner": "person2",
+  "experiment_name": "rbf_svm_tuned_no_centroid",
+  "test_scored": false,
+  "split": {
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "expected_split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "n_split_rows": 9564,
+    "n_primary_features": 76,
+    "feature_list": "data/processed/proposed_leakage_aware_features.csv",
+    "split_file": "data/processed/proposed_splits.csv",
+    "id_column": "kepoi_name",
+    "group_column": "kepid",
+    "target_column": "koi_disposition",
+    "class_order": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "FALSE POSITIVE"
+    ],
+    "random_seed": 245,
+    "test_scored": false
+  }
+}

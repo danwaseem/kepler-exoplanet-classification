@@ -1,0 +1,10 @@
+model,regime,setting,train_macro_F1,validation_macro_F1,gap
+KNN (k),Too simple (underfitting),k = 51,0.718,0.709,0.009
+KNN (k),Sweet spot,k = 3,0.845,0.733,0.112
+KNN (k),Too complex (overfitting),k = 1,1.0,0.711,0.289
+RBF SVM (C),Too simple (underfitting),C = 0.3,0.747,0.743,0.004
+RBF SVM (C),Sweet spot,C = 100,0.864,0.79,0.074
+RBF SVM (C),Too complex (overfitting),C = 300,0.888,0.785,0.103
+RBF SVM (gamma),Too simple (underfitting),gamma = 0.001,0.778,0.76,0.017
+RBF SVM (gamma),Sweet spot,gamma = 0.01,0.868,0.788,0.08
+RBF SVM (gamma),Too complex (overfitting),gamma = 1,1.0,0.456,0.544
