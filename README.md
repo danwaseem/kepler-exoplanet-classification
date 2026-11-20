@@ -108,6 +108,35 @@ print("checksums ok")
 PY
 ```
 
+## Demo
+
+The demo predicts the disposition of Kepler Objects of Interest from the test partition with the saved pruned Decision Tree and Random Forest. It does not train or change any model.
+
+Setup:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Example:
+
+```bash
+python demo/predict_koi.py --kepoi K00115.03
+python demo/predict_koi.py --sample 5
+```
+
+`--kepoi` takes one or more KOI names. `--sample N` picks N test KOIs with seed 245. Only test-partition KOIs are allowed. A development KOI is refused, because the models were trained on it.
+
+For each KOI the output shows the name, the true disposition, each model's prediction (marked correct or wrong), and its class probabilities. At the end it prints one line per model, such as "3 of 5 correct", and confirms that the predictions match `results/final_test/test_predictions.csv`.
+
+The Random Forest file (tuned_forest.joblib, 10,273,308 bytes, about 10.3 MB) is stored on Google Drive because it is over the 2 MB Canvas limit. Compressed, it is still 2.56 MB. Download it into `results/person3/random_forest/` before running the demo. The pruned Decision Tree file (11,979 bytes) is in the repository.
+
+Download link: https://drive.google.com/file/d/1Clgn72n5EUQBIArY1r1FPTxTMRtEPA_I/view?usp=sharing
+
+If the forest file is missing, the demo says so and runs with the Decision Tree only.
+
 ## Shared preprocessing and evaluation
 
 Run scripts from the repository root so paths resolve correctly. Use the saved `dev_fold` assignments. Fit imputation (and scaling when needed) only on each training fold. Do not score the test partition during development. Report grouped validation **macro-F1** as the primary comparison metric, with accuracy and per-class recall beside it.
