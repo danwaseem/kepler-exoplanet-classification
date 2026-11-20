@@ -1,222 +1,178 @@
-# Experimental summary, Stages 1–5B
+# Final team summary
 
-This summary collects the saved development-partition results for Danish Waseem's Decision Tree and Random Forest experiments. It does not add a new model, a new split, or a test-set score. Metrics are copied from the stage findings and result files. No paper or DOI was added here. The data DOI already recorded in Stage 1 is 10.26133/NEA4.
+This is the final summary of the DATA 245 Kepler KOI classification project. Every number below was read from the file named in its section. Nothing here is a new result. Stage-level detail for the Decision Tree and Random Forest work is in `docs/person3/` and in the saved results under `results/`.
 
-## Decision for the primary experiment
+Related records: [final test protocol](FINAL_TEST_PROTOCOL.md), [team approval record](meeting_notes/2026-11-20_final_plan_approval.md), [deviation log](../../results/final_test/DEVIATION_LOG.md).
 
-The primary experiment keeps the existing 76-feature leakage-aware configuration. The 56-feature configuration that drops provisional centroid offsets remains a documented sensitivity analysis. The 77-feature configuration that adds `koi_fwm_stat_sig` remains diagnostic only. The selected hyperparameters, feature lists, and saved splits were not changed after Stage 5B. The test partition has not been scored.
+## a. Setup
 
-The team proposal file is still marked not team-final. That status was not edited.
+Sources: `results/final_test/run_record.json` and `data/processed/proposed_splits.csv`.
 
-## Data, split, and leakage
+- Dataset SHA-256: `a85348f20082d24fb14d4a05a9a44c644b801998fad7cec36f8980eb1f0a69ab`
+- Split SHA-256: `d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a`
+- Development rows used for training and cross-validation: 7,381
+- Test rows scored: 1,820
+- Features: 76
+- Development folds: 5 grouped by host star (`kepid`)
+- Random seed: 245
 
-The table is the NASA Exoplanet Archive Kepler Objects of Interest cumulative table, filename version date 2026-10-06, local file `data/raw/koi_cumulative_2026-10-06.csv`. SHA-256 `a85348f20082d24fb14d4a05a9a44c644b801998fad7cec36f8980eb1f0a69ab`, 11,843,781 bytes, 9,564 rows and 153 columns. There are 0 duplicate rows and 0 duplicate `kepoi_name` values. There are 8,214 host stars (`kepid`), 938 stars with more than one KOI (2,288 KOIs), and 327 stars with mixed dispositions.
+## b. Development results (configuration A)
 
-Full-table dispositions: CONFIRMED 2,748 (28.7%), CANDIDATE 1,977 (20.7%), FALSE POSITIVE 4,839 (50.6%). FALSE POSITIVE is the largest class. That share is a base-rate context, not a trained baseline.
+Source: `results/shared/combined_comparison/summary_config_a.csv`. Mean and standard deviation over the 5 grouped development folds. Gap is training macro-F1 minus validation macro-F1.
 
-The column page was retrieved on 2026-10-31. The saved page says it was last updated on 2021-02-11.
-
-The target is `koi_disposition`. The grouping key is `kepid`. Seed 245. The holdout is `StratifiedGroupKFold` with 5 folds, shuffle on, and test equal to fold 0. Development cross-validation is a separate 5-fold grouped split on the development stars, stored as `dev_fold`. Saved split SHA-256: `d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a`. Host-star overlap between development and test is zero.
-
-| Slice | Rows | Host stars | CONFIRMED | CANDIDATE | FALSE POSITIVE |
+| Model | Macro-F1 | Accuracy | Macro precision | Macro recall | Gap |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Development, all assigned rows | 7,653 | 6,573 | 28.7% | 20.7% | 50.6% |
-| Test, all assigned rows | 1,911 | 1,641 | 28.7% | 20.7% | 50.6% |
-| Development, measured transit depth | 7,381 | 6,357 | 29.8% | 20.4% | 49.8% |
-| Test, measured transit depth | 1,820 | 1,570 | 30.2% | 20.2% | 49.6% |
+| Random forest (tuned) | 0.8156 ± 0.0130 | 0.8433 ± 0.0105 | 0.8114 ± 0.0133 | 0.8216 ± 0.0133 | 0.1702 ± 0.0130 |
+| RBF SVM | 0.7888 ± 0.0116 | 0.8160 ± 0.0081 | 0.7832 ± 0.0111 | 0.7983 ± 0.0133 | 0.0940 ± 0.0153 |
+| Linear SVM | 0.7750 ± 0.0122 | 0.8083 ± 0.0093 | 0.7700 ± 0.0118 | 0.7842 ± 0.0115 | 0.0119 ± 0.0142 |
+| Logistic regression | 0.7721 ± 0.0137 | 0.7923 ± 0.0123 | 0.7684 ± 0.0135 | 0.7905 ± 0.0142 | 0.0151 ± 0.0158 |
+| Pruned DT | 0.7716 ± 0.0146 | 0.8137 ± 0.0098 | 0.7773 ± 0.0126 | 0.7697 ± 0.0156 | 0.0468 ± 0.0202 |
+| KNN | 0.7364 ± 0.0146 | 0.7811 ± 0.0131 | 0.7401 ± 0.0152 | 0.7438 ± 0.0127 | 0.2636 ± 0.0146 |
+| Naive Bayes | 0.6699 ± 0.0205 | 0.6994 ± 0.0119 | 0.6817 ± 0.0220 | 0.6975 ± 0.0229 | 0.0030 ± 0.0168 |
+| Majority floor | 0.2218 ± 0.0006 | 0.4984 ± 0.0019 | 0.1661 ± 0.0006 | 0.3333 ± 0.0000 | 0.0000 ± 0.0007 |
+| PCA probe: original 76 | 0.7735 ± 0.0108 | 0.7950 ± 0.0085 | 0.7700 ± 0.0112 | 0.7905 ± 0.0122 | 0.0145 ± 0.0122 |
+| PCA probe: PCA 25 | 0.7664 ± 0.0129 | 0.7874 ± 0.0106 | 0.7633 ± 0.0126 | 0.7852 ± 0.0142 | 0.0030 ± 0.0142 |
 
-The primary matrix uses the 7,381 development rows with a measured `koi_depth`. Supports in that matrix are CONFIRMED 2,197, CANDIDATE 1,505, and FALSE POSITIVE 3,679. The 363 rows with missing `koi_depth` stay in the split file for a later sensitivity experiment. They are not deleted and they are not median-imputed. Six rows with fit type none still have a depth and stay in the primary matrix.
+The two PCA rows are an information probe by Person 4, not competing models. The majority floor predicts the most common class.
 
-Excluded from the scientific features: `koi_pdisposition`, `koi_score`, the four `koi_fpflag_*` columns, `kepler_name`, and `koi_comment`. `kepid` is the grouping key only. `koi_fwm_stat_sig` is excluded from the primary 76 columns and kept only in the diagnostic configuration. Centroid-offset measurements and their uncertainty columns are inside the 76 and are marked provisional. `koi_count` equals the number of KOI rows on a star, including false positives, on every host star in this file. The column page calls it the number of planet candidates.
+## c. Paired development comparisons
 
-Preprocessing for these models is a median imputer inside the training pipeline. Trees and forests are not standardized. The imputer is fit on the training fold only. Residual gaps on depth-measured rows are the cells that get imputed.
+Source: `results/shared/combined_comparison/paired_folds.csv`. Difference is model A minus model B on the same 5 folds. The p-value (column `nb_two_sided_p`) is from the Nadeau-Bengio corrected resampled t-test (5 folds, 4 degrees of freedom). With 5 folds these are descriptive, not final tests.
 
-## Selected models
+| Model A | Model B | Metric | Mean diff | Min | Max | Folds A higher | p |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Random forest (tuned) | RBF SVM | validation_macro_f1 | +0.02683 | +0.01918 | +0.04042 | 5 of 5 | 0.0090 |
+| Random forest (tuned) | RBF SVM | validation_accuracy | +0.02723 | +0.02161 | +0.03567 | 5 of 5 | 0.0031 |
+| Random forest (tuned) | Logistic regression | validation_macro_f1 | +0.04357 | +0.03437 | +0.05873 | 5 of 5 | 0.0023 |
+| Random forest (tuned) | Logistic regression | validation_accuracy | +0.05092 | +0.04254 | +0.06326 | 5 of 5 | 0.0010 |
+| RBF SVM | Logistic regression | validation_macro_f1 | +0.01673 | +0.01085 | +0.01934 | 5 of 5 | 0.0020 |
+| RBF SVM | Logistic regression | validation_accuracy | +0.02369 | +0.01777 | +0.02836 | 5 of 5 | 0.0014 |
+| Pruned DT | Logistic regression | validation_macro_f1 | -0.00044 | -0.01424 | +0.01532 | 3 of 5 | 0.9572 |
+| Pruned DT | Logistic regression | validation_accuracy | +0.02139 | +0.01350 | +0.02894 | 5 of 5 | 0.0093 |
 
-Both models use Gini splits, `random_state=245`, and the median imputer.
+## d. Centroid sensitivity (A vs B)
 
-- Pruned tree: `max_depth=None`, `min_samples_split=2`, `min_samples_leaf=1`, `ccp_alpha=0.0011107571059714625`, `class_weight=None`.
-- Tuned forest: `n_estimators=100`, `max_depth=20`, `max_features='sqrt'`, `min_samples_leaf=2`, `min_samples_split=2`, `class_weight='balanced'`, `bootstrap=True`.
+Source: `results/shared/combined_comparison/centroid_a_vs_b.csv`. Configuration A uses the 76 features. Configuration B drops the 20 centroid columns (10 centroid offsets and their 10 uncertainty columns) and uses 56 features. Both use development folds only.
 
-Selection maximized mean grouped validation macro-F1. Exact ties would break toward the smaller macro-F1 gap, then fewer leaves or fewer trees. The selected score is the score used to choose the model. It is not a nested estimate. No hypothesis test was applied.
-
-## Stage 2: unrestricted tree
-
-The unrestricted tree memorizes each training fold: training accuracy and macro-F1 are 1.0000. Mean grouped validation accuracy is 0.7735 ± 0.0089. Mean grouped validation macro-F1 is 0.7302 ± 0.0086. The macro-F1 gap is 0.2698. Fold depths are 37, 30, 32, 29, and 28. Fold leaf counts are 585, 590, 577, 595, and 592.
-
-On the depth grid, validation macro-F1 is highest at `max_depth=8`: 0.7643 ± 0.0075, with training macro-F1 0.8569 ± 0.0075. The unrestricted validation macro-F1 is 0.0341 lower. At `max_depth=1`, training macro-F1 is 0.4107 and validation macro-F1 is 0.4052. Depths 7 and 9 were not on that grid. No depth was selected as the final tree in Stage 2.
-
-## Stage 3: pruning
-
-The search had 54 structural configurations and 22 shared cost-complexity alphas, 160 unique configurations after duplicates were removed. Alphas came from the training-fold pruning paths, not from the validation scores.
-
-| Model | Train accuracy | Validation accuracy | Train macro-F1 | Validation macro-F1 | Gap | Mean depth | Mean leaves |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Unrestricted | 1.0000 ± 0.0000 | 0.7735 ± 0.0089 | 1.0000 ± 0.0000 | 0.7302 ± 0.0086 | 0.2698 | 31.20 | 587.8 |
-| Depth 8 | 0.8835 ± 0.0067 | 0.8038 ± 0.0052 | 0.8569 ± 0.0075 | 0.7643 ± 0.0075 | 0.0927 | 8.00 | 138.8 |
-| Pruned tree | 0.8530 ± 0.0049 | 0.8137 ± 0.0098 | 0.8184 ± 0.0068 | 0.7716 ± 0.0146 | 0.0468 | 11.00 | 44.8 |
-
-The pruned tree is higher than the unrestricted tree on 5 of 5 folds. Paired differences have mean 0.0414, minimum 0.0276, and maximum 0.0639. It is higher than the depth-8 tree on 4 of 5 folds and lower on fold 1 by 0.0033. The mean paired difference versus depth 8 is 0.0074, minimum −0.0033, maximum 0.0272. Depth 8 was the peak of the Stage 2 curve on these same folds, so that comparison is not a new sample.
-
-The next alpha, 0.00132958, has validation macro-F1 0.7713, validation accuracy 0.8140, gap 0.0342, and 35.0 mean leaves. The selected alpha leads it by about 0.0003 macro-F1. An in-sample fit on all development rows has depth 9 and 39 leaves. That fit was not used to score validation folds.
-
-## Stage 4: forest comparison
-
-The listed forest grid has 216 cells. The search evaluated 25. The baseline architecture was pre-specified at 100, 200, and 400 trees. Sixteen other 100-tree cells were drawn with seed 245 before validation scores were seen. The top three of those sixteen were repeated at 200 and 400 trees.
-
-| Model | Train accuracy | Validation accuracy | Validation macro precision | Validation macro recall | Train macro-F1 | Validation macro-F1 | Gap | Fit seconds |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Unrestricted tree | 1.0000 ± 0.0000 | 0.7735 ± 0.0089 | 0.7301 ± 0.0098 | 0.7309 ± 0.0074 | 1.0000 ± 0.0000 | 0.7302 ± 0.0086 | 0.2698 | 1.3 |
-| Depth-8 tree | 0.8835 ± 0.0067 | 0.8038 ± 0.0052 | 0.7638 ± 0.0055 | 0.7676 ± 0.0114 | 0.8569 ± 0.0075 | 0.7643 ± 0.0075 | 0.0927 | 0.7 |
-| Pruned tree | 0.8530 ± 0.0049 | 0.8137 ± 0.0098 | 0.7773 ± 0.0126 | 0.7697 ± 0.0156 | 0.8184 ± 0.0068 | 0.7716 ± 0.0146 | 0.0468 | 1.3 |
-| Baseline forest | 1.0000 ± 0.0000 | 0.8488 ± 0.0033 | 0.8202 ± 0.0044 | 0.8020 ± 0.0064 | 1.0000 ± 0.0000 | 0.8084 ± 0.0046 | 0.1916 | 1.2 |
-| Tuned forest | 0.9874 ± 0.0013 | 0.8433 ± 0.0105 | 0.8114 ± 0.0133 | 0.8216 ± 0.0133 | 0.9858 ± 0.0016 | 0.8156 ± 0.0130 | 0.1702 | 1.2 |
-
-Fold validation macro-F1:
-
-| Fold | Unrestricted tree | Depth-8 tree | Pruned tree | Baseline forest | Tuned forest |
-| ---: | ---: | ---: | ---: | ---: | ---: |
-| 0 | 0.7170 | 0.7768 | 0.7809 | 0.8140 | 0.8243 |
-| 1 | 0.7260 | 0.7581 | 0.7548 | 0.8037 | 0.7929 |
-| 2 | 0.7361 | 0.7635 | 0.7637 | 0.8125 | 0.8164 |
-| 3 | 0.7357 | 0.7587 | 0.7672 | 0.8051 | 0.8216 |
-| 4 | 0.7363 | 0.7643 | 0.7915 | 0.8067 | 0.8229 |
-
-The tuned forest is higher than the pruned tree on 5 of 5 folds. Paired differences have mean 0.0440, minimum 0.0313, and maximum 0.0544. Its gap, 0.1702, is larger than the pruned tree's gap, 0.0468. The forest raises validation macro-F1 and does not shrink the training-validation gap relative to the pruned tree. Against the unrestricted tree, both the validation score and the gap move in the direction the research question asked about. Against the baseline forest, the tuned forest is higher on 4 of 5 folds and lower on fold 1 by 0.0108. The mean paired difference is 0.0072.
-
-The same tuned architecture at 200 trees has validation macro-F1 0.8148, and at 400 trees 0.8140. More trees did not raise that score. The baseline forest at 400 trees has validation macro-F1 0.8131. Fit times are machine-dependent. The five-fold fit totals above are about 1.2 to 1.3 seconds for the selected models.
-
-`class_weight='balanced'` lowers validation accuracy relative to the unweighted baseline forest, 0.8433 versus 0.8488, and raises macro-F1. Pooled out-of-fold Candidate recall is 0.7003 for the tuned forest and 0.5754 for the baseline forest. Candidate precision is 0.6319 and 0.7018.
-
-Pooled out-of-fold class metrics for the two selected models:
-
-| Model | Class | Precision | Recall | F1 | Support |
+| Model | B settings | Macro-F1 A | Macro-F1 B | B minus A | Folds where B is lower |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Pruned tree | CONFIRMED | 0.8424 | 0.8757 | 0.8587 | 2197 |
-| Pruned tree | CANDIDATE | 0.6238 | 0.5475 | 0.5832 | 1505 |
-| Pruned tree | FALSE POSITIVE | 0.8628 | 0.8856 | 0.8740 | 3679 |
-| Tuned forest | CONFIRMED | 0.8836 | 0.8912 | 0.8874 | 2197 |
-| Tuned forest | CANDIDATE | 0.6319 | 0.7003 | 0.6644 | 1505 |
-| Tuned forest | FALSE POSITIVE | 0.9185 | 0.8731 | 0.8952 | 3679 |
+| Logistic regression | same as A | 0.7721 | 0.7192 | -0.0528 | 5 of 5 |
+| Naive Bayes | same as A | 0.6699 | 0.6044 | -0.0656 | 5 of 5 |
+| KNN | same as A | 0.7364 | 0.6301 | -0.1063 | 5 of 5 |
+| Linear SVM | same as A (retuning chose the A settings: C=10, balanced) | 0.7750 | 0.7069 | -0.0681 | 5 of 5 |
+| RBF SVM | same as A | 0.7888 | 0.7296 | -0.0592 | 5 of 5 |
+| Pruned DT | same as A | 0.7716 | 0.7203 | -0.0513 | 5 of 5 |
+| Random forest (tuned) | same as A | 0.8156 | 0.7634 | -0.0522 | 5 of 5 |
 
-Tuned forest confusion matrix, rows true and columns predicted, order CONFIRMED, CANDIDATE, FALSE POSITIVE: 1958, 196, 43; 209, 1054, 242; 49, 418, 3212. Pooled out-of-fold macro-F1 is 0.8156.
+Every model is lower without the 20 centroid columns on all 5 folds. The drop in macro-F1 is 0.051 to 0.106.
 
-## Stage 5: feature importance
+These columns measure how far the center of light moves during transit (flux-weighted centroids) and where the transit source sits in difference images (PRF centroids). NASA's column definitions (`data/external/koi_cumulative_columns.html`) say the centroid offset false-positive flag, `koi_fpflag_co`, is inferred from this kind of in-transit vs out-of-transit centroid measurement. The flag itself is excluded from the features, but these underlying measurements are kept. So the models reproduce the archive disposition using vetting-diagnostic measurements, not transit data alone.
 
-Permutation importance is the drop in validation macro-F1 when one raw feature is shuffled, 10 repeats, aggregated across the five validation folds. Each model and its imputer were fit on the training fold only. Impurity importance is the training-fold split improvement and is descriptive. Importance did not change the selected models.
+A second table, `results/shared/combined_comparison/centroid_p2_retuned_vs_fixed.csv`, compares Person 2's retuned and fixed-settings values for reference.
 
-Stable forest permutation features, mean drop and across-fold standard deviation:
+## e. Final test results
 
-| Rank | Column | Mean drop | Std | Fold ranks | Provisional centroid |
-| ---: | --- | ---: | ---: | --- | --- |
-| 1 | `koi_model_snr` | 0.0183 | 0.0050 | 1–2 | No |
-| 2 | `koi_dikco_msky` | 0.0150 | 0.0028 | 1–2 | Yes |
-| 3 | `koi_dicco_msky` | 0.0088 | 0.0026 | 3 on every fold | Yes |
+Sources: `results/final_test/metrics_summary.csv`, `results/final_test/bootstrap_ci.csv`, `results/final_test/mcnemar.csv`, `results/final_test/per_class_metrics.csv` and `results/final_test/svm_roc_auc_fix.csv`. The test partition was scored once, on 1,820 rows, with configuration A only.
 
-The column page defines `koi_model_snr` as transit depth divided by the mean uncertainty in the flux during the transits. `koi_dikco_msky` is the sky-plane angle between the difference-image PRF centroid and the Kepler Input Catalog position. `koi_dicco_msky` is the sky-plane angle between the out-of-transit PRF centroid and the difference-image centroid. Those two offsets have Spearman correlation 0.8603 on the development rows.
+### Metrics
 
-Mean ranks from 4 downward are about 0.002, with across-fold standard deviations as large as the means. The mean pairwise Spearman correlation of the full 76-feature forest importance vectors is 0.1780. The pre-specified stability rule for the top 10 is not met. Only the first three features hold their ranks.
+| Model | Accuracy | Balanced accuracy | Macro precision | Macro recall | Macro-F1 | MCC | ROC-AUC (OvR macro) | Score type |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| Random Forest | 0.8467 | 0.8249 | 0.8159 | 0.8249 | 0.8199 | 0.7563 | 0.9519 | predict_proba |
+| RBF SVM | 0.8258 | 0.8045 | 0.7916 | 0.8045 | 0.7967 | 0.7256 | 0.9249 * | decision_function |
+| Linear SVM | 0.8016 | 0.7720 | 0.7606 | 0.7720 | 0.7653 | 0.6862 | 0.9114 * | decision_function |
+| Logistic Regression | 0.7967 | 0.7890 | 0.7707 | 0.7890 | 0.7735 | 0.6898 | 0.9210 | predict_proba |
+| Pruned Decision Tree | 0.8137 | 0.7598 | 0.7817 | 0.7598 | 0.7677 | 0.6966 | 0.9227 | predict_proba |
+| KNN | 0.7753 | 0.7376 | 0.7318 | 0.7376 | 0.7291 | 0.6455 | 0.9004 | predict_proba |
+| Naive Bayes | 0.7049 | 0.6981 | 0.6812 | 0.6981 | 0.6727 | 0.5683 | 0.8897 | predict_proba |
+| Majority baseline | 0.4962 | 0.3333 | 0.1654 | 0.3333 | 0.2211 | 0.0000 | excluded | excluded |
 
-The pruned tree's largest permutation drop is `koi_prad` at 0.1382. The same shuffle drops the forest by 0.0024. Six of each model's ten leading features are shared. The Spearman correlation between the two mean importance vectors is 0.5762. Impurity importance has rank correlation 0.6325 with forest permutation importance and places `koi_ror` and `koi_prad` at impurity ranks 4 and 5.
+\* The original run recorded NaN for the two SVM ROC-AUC values because of a script bug. The values shown come from `svm_roc_auc_fix.csv`, computed after the run from decision scores. Predictions were verified identical on all 1,820 rows. See `results/final_test/DEVIATION_LOG.md`.
 
-The pre-specified centroid-dominance rule was not met: signal-to-noise is first, 2 of the forest's top 10 are centroid offsets, and those offsets hold 0.4497 of the positive mean permutation importance. Their stable second and third place is still a methodological concern.
+### 95% bootstrap confidence intervals
 
-Other development-row Spearman associations at or above 0.7 include `koi_period` with `koi_sma` (0.9966), `koi_teq` with `koi_insol` (1.0000), `koi_slogg` with `koi_srad` (−0.9796), `koi_depth` with `koi_ror` (0.9379), and `koi_prad` with `koi_ror` (0.8840). Permutation importance does not establish causation. Correlated columns can share a score drop.
+Host stars (`kepid`) were resampled, 1,000 resamples, seed 245. Source: `results/final_test/bootstrap_ci.csv`.
 
-## Stage 5B: centroid sensitivity
+| Model | Macro-F1 | 95% CI | Accuracy | 95% CI |
+| --- | ---: | --- | ---: | --- |
+| Random Forest | 0.8199 | 0.7997 to 0.8385 | 0.8467 | 0.8292 to 0.8633 |
+| RBF SVM | 0.7967 | 0.7776 to 0.8155 | 0.8258 | 0.8090 to 0.8427 |
+| Linear SVM | 0.7653 | 0.7424 to 0.7863 | 0.8016 | 0.7816 to 0.8213 |
+| Logistic Regression | 0.7735 | 0.7531 to 0.7947 | 0.7967 | 0.7783 to 0.8168 |
+| Pruned Decision Tree | 0.7677 | 0.7459 to 0.7881 | 0.8137 | 0.7952 to 0.8310 |
+| KNN | 0.7291 | 0.7070 to 0.7525 | 0.7753 | 0.7572 to 0.7944 |
+| Naive Bayes | 0.6727 | 0.6507 to 0.6936 | 0.7049 | 0.6843 to 0.7258 |
+| Majority baseline | 0.2211 | 0.2129 to 0.2290 | 0.4962 | 0.4692 to 0.5231 |
 
-Configuration A is the 76-feature primary set and reproduces the Stage 3 and Stage 4 validation macro-F1. Configuration B drops 10 centroid-offset measurements and their 10 uncertainty columns. Configuration C adds `koi_fwm_stat_sig` to A. That column is missing on 10.51% of development rows. The column page says 100% means there is no significant flux-weighted offset and there is confidence that the transit is on the target star.
+### McNemar test
 
-| Model | Config | Features | Validation accuracy | Validation macro-F1 | Candidate recall |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Pruned tree | A, primary | 76 | 0.8137 ± 0.0098 | 0.7716 ± 0.0146 | 0.5476 ± 0.0605 |
-| Pruned tree | B, sensitivity | 56 | 0.7705 ± 0.0113 | 0.7203 ± 0.0198 | 0.4623 ± 0.0912 |
-| Pruned tree | C, diagnostic | 77 | 0.8121 ± 0.0076 | 0.7699 ± 0.0126 | 0.5487 ± 0.0643 |
-| Tuned forest | A, primary | 76 | 0.8433 ± 0.0105 | 0.8156 ± 0.0130 | 0.7005 ± 0.0355 |
-| Tuned forest | B, sensitivity | 56 | 0.7896 ± 0.0056 | 0.7634 ± 0.0065 | 0.6561 ± 0.0260 |
-| Tuned forest | C, diagnostic | 77 | 0.8408 ± 0.0066 | 0.8133 ± 0.0091 | 0.7004 ± 0.0266 |
+Exact binomial, two-sided, on per-row correct vs incorrect predictions. Source: `results/final_test/mcnemar.csv`.
 
-B minus A validation macro-F1 is −0.0513 for the tree and −0.0522 for the forest, lower on all five folds. Pooled Candidate recall goes from 0.5475 to 0.4618 for the tree and from 0.7003 to 0.6558 for the forest. Candidate rows predicted Confirmed go from 260 to 257 for the tree and stay at 209 for the forest. Candidate rows predicted False Positive go from 421 to 553 for the tree and from 242 to 309 for the forest. For the forest, False Positive rows predicted Confirmed go from 49 to 164, False Positive rows predicted Candidate go from 418 to 565, and Confirmed rows predicted False Positive go from 43 to 89.
+| Model A | Model B | A right, B wrong | A wrong, B right | Discordant rows | p |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Random Forest | RBF SVM | 112 | 74 | 186 | 0.00651 |
+| Random Forest | Logistic Regression | 143 | 52 | 195 | 5.16e-11 |
 
-C minus A validation macro-F1 is −0.0017 for the tree and −0.0023 for the forest. The fold differences change sign. Candidate recall is essentially unchanged. C was not adopted.
+### Per-class precision, recall and F1
 
-## Limitations
+Source: `results/final_test/per_class_metrics.csv`. Test support: CONFIRMED 549, CANDIDATE 368, FALSE POSITIVE 903.
 
-- The reported validation scores for the selected tree and forest are the scores used to choose them. They are not nested cross-validation estimates. The Stage 3 comparison with depth 8 uses the same folds that identified depth 8 in Stage 2.
-- Fold counts and mean differences are not hypothesis tests.
-- The 76-feature list is retained for this primary experiment and is still a team proposal.
-- Centroid offsets remain vetting measurements. Removing them lowers development validation macro-F1. Keeping them means the model can use the centroid analysis. The primary set was not switched to the 56-feature sensitivity configuration.
-- Permutation importance depends on the other columns that remain available. It is not a causal ranking. Impurity importance answers a different question.
-- Only three forest permutation features are stable across folds.
-- `koi_fwm_stat_sig` is diagnostic. It did not improve grouped validation macro-F1.
-- The 363 rows without a transit depth have not been used in a sensitivity fit.
-- The forest search left 191 of 216 listed cells unevaluated.
-- Fit seconds depend on the machine.
-- The test partition has not been scored.
+| Model | Class | Precision | Recall | F1 |
+| --- | --- | ---: | ---: | ---: |
+| Random Forest | CONFIRMED | 0.8929 | 0.8962 | 0.8945 |
+| Random Forest | CANDIDATE | 0.6427 | 0.7038 | 0.6719 |
+| Random Forest | FALSE POSITIVE | 0.9122 | 0.8749 | 0.8932 |
+| RBF SVM | CONFIRMED | 0.8688 | 0.8925 | 0.8805 |
+| RBF SVM | CANDIDATE | 0.5919 | 0.6739 | 0.6302 |
+| RBF SVM | FALSE POSITIVE | 0.9140 | 0.8472 | 0.8793 |
+| Linear SVM | CONFIRMED | 0.8294 | 0.9035 | 0.8649 |
+| Linear SVM | CANDIDATE | 0.5599 | 0.5842 | 0.5718 |
+| Linear SVM | FALSE POSITIVE | 0.8926 | 0.8283 | 0.8593 |
+| Logistic Regression | CONFIRMED | 0.8633 | 0.8743 | 0.8688 |
+| Logistic Regression | CANDIDATE | 0.5242 | 0.7065 | 0.6019 |
+| Logistic Regression | FALSE POSITIVE | 0.9245 | 0.7863 | 0.8498 |
+| Pruned Decision Tree | CONFIRMED | 0.8585 | 0.8506 | 0.8545 |
+| Pruned Decision Tree | CANDIDATE | 0.6485 | 0.5163 | 0.5749 |
+| Pruned Decision Tree | FALSE POSITIVE | 0.8383 | 0.9125 | 0.8738 |
+| KNN | CONFIRMED | 0.7522 | 0.9399 | 0.8356 |
+| KNN | CANDIDATE | 0.5757 | 0.4755 | 0.5208 |
+| KNN | FALSE POSITIVE | 0.8675 | 0.7973 | 0.8309 |
+| Naive Bayes | CONFIRMED | 0.7171 | 0.9417 | 0.8142 |
+| Naive Bayes | CANDIDATE | 0.3929 | 0.5136 | 0.4452 |
+| Naive Bayes | FALSE POSITIVE | 0.9337 | 0.6390 | 0.7587 |
+| Majority baseline | CONFIRMED | 0.0000 | 0.0000 | 0.0000 |
+| Majority baseline | CANDIDATE | 0.0000 | 0.0000 | 0.0000 |
+| Majority baseline | FALSE POSITIVE | 0.4962 | 1.0000 | 0.6632 |
 
-## Remaining tasks
+## f. Development vs test macro-F1
 
-- Final test evaluation has not started. It should use the retained 76-feature set and the selected hyperparameters, after a separate decision to open the test partition.
-- The 363 incomplete KOIs remain reserved for a sensitivity experiment.
-- The literature review of at least 13 papers, in the student's own words with APA citations, has not been written. The intermediate report is due Tuesday, November 3, 2026, at 4:59 PM.
-- The team has not marked the feature list and split as final.
-- The generative-AI disclosure still needs this log, or the portion the course requires, in the student's own words.
+Source: `results/final_test/metrics_summary.csv`. The development value is the mean of the 5 grouped development folds from each model's saved development summary. The file column `dev_source` names that file for each model.
 
-## Figures for the intermediate report
+| Model | Development | Test | Test minus development |
+| --- | ---: | ---: | ---: |
+| Random Forest | 0.8156 | 0.8199 | +0.0042 |
+| RBF SVM | 0.7888 | 0.7967 | +0.0079 |
+| Linear SVM | 0.7750 | 0.7653 | -0.0097 |
+| Logistic Regression | 0.7721 | 0.7735 | +0.0014 |
+| Pruned Decision Tree | 0.7716 | 0.7677 | -0.0039 |
+| KNN | 0.7364 | 0.7291 | -0.0073 |
+| Naive Bayes | 0.6699 | 0.6727 | +0.0028 |
+| Majority baseline | 0.2218 | 0.2211 | -0.0007 |
 
-Each caption describes the saved figure. None of these figures uses the test partition.
+## g. Label changes between catalog versions
 
-| File | Caption |
-| --- | --- |
-| `figures/shared/class_balance.png` | Disposition counts in the cumulative table. |
-| `figures/shared/missingness.png` | Missingness among columns considered for the learning matrix. |
-| `figures/shared/unfitted_block_by_disposition.png` | Disposition mix for rows with and without a measured transit depth. |
-| `figures/shared/feature_distributions_by_class.png` | Selected measurement distributions by archive disposition. |
-| `figures/shared/spearman_correlation.png` | Spearman correlations among a subset of development measurements. |
-| `figures/person3/decision_tree/stage2/validation_curve.png` | Training and grouped validation macro-F1 against Decision Tree `max_depth`, including the unrestricted tree. |
-| `figures/person3/decision_tree/stage2/oof_confusion_matrix.png` | Unrestricted tree, pooled development out-of-fold confusion matrix. |
-| `figures/person3/decision_tree/stage3/ccp_alpha_curve.png` | Training and grouped validation performance against `ccp_alpha` for the unrestricted tree. |
-| `figures/person3/decision_tree/stage3/model_comparison.png` | Training and grouped validation macro-F1 for the unrestricted tree, the depth-8 tree, and the pruned tree. |
-| `figures/person3/random_forest/model_comparison.png` | Training and grouped validation macro-F1 for the three trees, the baseline forest, and the tuned forest. |
-| `figures/person3/random_forest/oof_confusion_matrix.png` | Tuned forest, pooled development out-of-fold confusion matrix. |
-| `figures/person3/feature_importance/forest_permutation_importance.png` | Fifteen largest tuned-forest permutation importances. Error bars are the standard deviation across the five validation folds. Pink bars are provisional centroid offsets. |
-| `figures/person3/feature_importance/forest_impurity_importance.png` | Fifteen largest tuned-forest impurity importances, averaged over the training folds. |
-| `figures/person3/feature_importance/forest_rank_by_fold.png` | Fold-by-fold permutation rank of the ten features with the highest mean forest importance. |
-| `figures/person3/feature_importance/tree_vs_forest_permutation.png` | Mean permutation importance for features in either model's top ten. An asterisk marks a provisional centroid offset. |
-| `figures/person3/feature_importance/top_feature_correlation.png` | Spearman correlation on development rows among the leading forest features and strongly associated partners. |
-| `figures/person3/centroid_sensitivity/validation_macro_f1.png` | Mean grouped validation macro-F1 for configurations A, B, and C. Error bars are the standard deviation across folds. |
-| `figures/person3/centroid_sensitivity/candidate_recall.png` | Mean grouped validation Candidate recall for configurations A, B, and C. |
-| `figures/person3/centroid_sensitivity/paired_macro_f1_differences.png` | Fold-level validation macro-F1 minus configuration A. Configuration C is diagnostic. |
-| `figures/person3/centroid_sensitivity/tree_confusion_A_vs_B.png` | Pruned tree, pooled development out-of-fold confusion matrices for the 76-feature set and the 56-feature sensitivity set. |
-| `figures/person3/centroid_sensitivity/forest_confusion_A_vs_B.png` | Tuned forest, pooled development out-of-fold confusion matrices for the 76-feature set and the 56-feature sensitivity set. |
-| `figures/person3/centroid_sensitivity/forest_confusion_A_vs_C_diagnostic.png` | Tuned forest, pooled development out-of-fold confusion matrices for the primary set and the diagnostic set that adds `koi_fwm_stat_sig`. |
+Source: `results/person1/label_crosstab/summary.json` (all KOIs). The counts compare the labels in an older copy of the KOI cumulative table distributed on Kaggle (`experiments/person1_baselines/data/kaggle_cumulative.csv`) with the labels in this project's dataset.
 
-## Tables for the intermediate report
+- 925 labels changed among 9,564 KOIs.
+- 591 of these were old candidates that were resolved: 443 to CONFIRMED and 148 to FALSE POSITIVE.
+- The other 334 changes went in other directions: 320 FALSE POSITIVE to CANDIDATE, 13 FALSE POSITIVE to CONFIRMED, and 1 CONFIRMED to FALSE POSITIVE.
 
-The stage findings files repeat these tables with the same numbers. The files below are the saved sources.
+## h. Limitations
 
-| File | Caption |
-| --- | --- |
-| `results/shared/dataset_record.json` | Checksum, shape, source, and split settings for the cumulative table. |
-| `results/shared/split_balance.json` | Row counts, host-star counts, and disposition shares by partition. |
-| `results/shared/column_audit.csv` | Column-by-column include or exclude decision, with the column-page reason. |
-| `data/processed/proposed_leakage_aware_features.csv` | The retained 76-feature primary list. |
-| `data/processed/proposed_splits.csv` | Saved `kepid` split and development fold for every KOI. |
-| `results/person3/decision_tree/stage2/validation_curve.csv` | Depth-grid training and validation accuracy and macro-F1. |
-| `results/person3/decision_tree/stage2/fold_metrics.csv` | Unrestricted-tree metrics on each development fold. |
-| `results/person3/decision_tree/stage2/oof_confusion_matrix.csv` | Unrestricted-tree pooled out-of-fold confusion counts. |
-| `results/person3/decision_tree/stage3/comparison_folds.csv` | Fold metrics for the unrestricted tree, the depth-8 tree, and the pruned tree. |
-| `results/person3/decision_tree/stage3/ccp_curve.csv` | Shared `ccp_alpha` grid for the unrestricted tree. |
-| `results/person3/decision_tree/stage3/search_summary.csv` | Evaluated tree configurations and their grouped validation scores. |
-| `results/person3/random_forest/comparison.csv` | Five-model means for accuracy, macro precision, macro recall, macro-F1, gap, and fit time. |
-| `results/person3/random_forest/comparison_folds.csv` | Fold metrics for the three trees and two forests. |
-| `results/person3/random_forest/per_class_metrics.csv` | Pooled out-of-fold precision, recall, and F1 by class. |
-| `results/person3/random_forest/oof_confusion_matrix.csv` | Tuned-forest pooled out-of-fold confusion counts. |
-| `results/person3/random_forest/rf_search_summary.csv` | The 25 evaluated forests. |
-| `results/person3/feature_importance/forest_permutation_importance.csv` | Tuned-forest permutation and impurity importance for all 76 features. |
-| `results/person3/feature_importance/tree_permutation_importance.csv` | Pruned-tree permutation and impurity importance for all 76 features. |
-| `results/person3/feature_importance/correlated_pairs.csv` | Development-row feature pairs with absolute Spearman correlation of at least 0.7. |
-| `results/person3/centroid_sensitivity/summary.csv` | Mean grouped validation accuracy, macro-F1, and per-class recall for configurations A, B, and C. |
-| `results/person3/centroid_sensitivity/paired_differences.csv` | Fold-level differences from configuration A. |
-| `results/person3/centroid_sensitivity/oof_confusion.csv` | Pooled out-of-fold confusion counts for both models and all three configurations. |
-| `results/person3/centroid_sensitivity/fold_metrics.csv` | Fold accuracy, macro-F1, and per-class recall for both models and all three configurations. |
+- CANDIDATE is not a physical class. It means the archive has not yet confirmed or rejected the object. On the test set, CANDIDATE has the lowest F1 of the three classes for every model except the majority baseline (section e, per-class table).
+- Labels change between catalog versions (section g). The labels used here are from one snapshot.
+- Model settings were chosen on the same development folds that are used to report development results. The development scores in section b are therefore not nested estimates.
+- `koi_count` may carry information from how multi-planet systems were confirmed.
+- Random Forest has a larger train-validation gap than the pruned Decision Tree: 0.1702 vs 0.0468 (section b).
+- The centroid columns are vetting diagnostics (section d), so the results describe agreement with the archive disposition, not classification from transit data alone.
+- The paired development comparisons use only 5 folds (section c).

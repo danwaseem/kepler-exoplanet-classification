@@ -4,7 +4,7 @@ DATA 245 group project at San José State University.
 
 **Objective:** Compare classical machine learning algorithms for classifying NASA Kepler Objects of Interest (KOI) as CONFIRMED, CANDIDATE, or FALSE POSITIVE.
 
-This repository is a shared team workspace. Four members implement different methods in parallel, using the same dataset, feature proposal, host-star grouped splits, and evaluation helpers. Individual model results are not the final project outcome until the group compares them and agrees on next steps.
+This repository is a shared team workspace. Four members implement different methods in parallel, using the same dataset, feature proposal, host-star grouped splits, and evaluation helpers. The group compared all results on the same folds and ran one final test under a written protocol. See Current project status.
 
 GitHub: [danwaseem/kepler-exoplanet-classification](https://github.com/danwaseem/kepler-exoplanet-classification)
 
@@ -34,32 +34,22 @@ Each person writes results under `results/personN/`, figures under `figures/pers
 
 ## Current project status
 
+The four workstreams, the combined development comparison, the final test, and the demo are complete.
+
 ### Completed
 
-- Shared NASA KOI snapshot, column audit, and leakage-aware feature proposal (76 columns; still **proposed** until the team finalizes it)
-- Locked host-star grouped development / test split and development CV folds
-- Shared loaders, median-imputation pipelines, development bundle API, and evaluation helpers
-- Stage 1 documentation and EDA figures under `results/shared/`, `figures/shared/`, and `docs/shared/`
-- Person 3 workstream (Decision Tree and Random Forest): overfitting baseline, pruning, tuned forest comparison, feature importance, and centroid sensitivity on development folds only
+- Shared NASA KOI snapshot, column audit, and leakage-aware feature proposal (76 columns). The team approved the data, features, models, and settings on 2026-11-20: [approval record](docs/shared/meeting_notes/2026-11-20_final_plan_approval.md).
+- Locked host-star grouped development / test split and development CV folds.
+- Shared loaders, median-imputation pipelines, development bundle API, and evaluation helpers.
+- All four workstreams: Person 1 (Logistic Regression, Naive Bayes, baselines), Person 2 (KNN, SVM), Person 3 (Decision Tree, Random Forest, feature importance, centroid sensitivity), and Person 4 (PCA, K-Means).
+- Combined development comparison of all models on the same folds: [`results/shared/combined_comparison/`](results/shared/combined_comparison/).
+- Final test, run once under a written protocol: [protocol](docs/shared/FINAL_TEST_PROTOCOL.md) and [results](results/final_test/). One script bug (SVM ROC-AUC recorded as NaN) was fixed after the run and logged in [`DEVIATION_LOG.md`](results/final_test/DEVIATION_LOG.md).
+- Demo: [`demo/predict_koi.py`](demo/predict_koi.py) predicts test-partition KOIs with the saved models. See the Demo section below.
+- Final team summary with all numbers and limitations: [`docs/shared/experimental_summary.md`](docs/shared/experimental_summary.md).
 
-Selected Person 3 development validation macro-F1 (not a final team result): pruned tree about 0.7716; tuned forest about 0.8156. Details: `docs/shared/experimental_summary.md` and `docs/person3/`.
+### Remaining
 
-### In progress
-
-- Person 1: Logistic Regression and Naive Bayes experiments
-- Person 2: KNN and SVM experiments
-- Person 4: PCA and K-Means experiments
-- Team review of the proposed 76-feature list
-
-### Planned
-
-- Combine development results across all four workstreams
-- Agree whether to finalize features or run additional sensitivity analyses
-- Single agreed evaluation of the held-out test partition (not opened during individual development)
-- Incomplete-KOI sensitivity experiment, if the team decides to include it
-- Final report, presentation, and demonstration
-
-Do not claim other teammates’ models are complete. Do not score the test partition until the team agrees.
+- Final report, presentation, and CRediT roles confirmed by each member.
 
 ## Dataset
 
