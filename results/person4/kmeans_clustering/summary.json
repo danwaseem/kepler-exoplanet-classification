@@ -1,0 +1,165 @@
+{
+  "description": "K-Means on signed-log standardized features, development partition; unsupervised (labels used only to score agreement). Report separately from classifier ranking.",
+  "n_rows": 7381,
+  "test_scored": false,
+  "split": {
+    "split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "expected_split_sha256": "d0a2892a312ddfb47ae4fe37650563ec566ee254a98c781598485992442b021a",
+    "n_split_rows": 9564,
+    "n_primary_features": 76,
+    "feature_list": "data/processed/proposed_leakage_aware_features.csv",
+    "split_file": "data/processed/proposed_splits.csv",
+    "id_column": "kepoi_name",
+    "group_column": "kepid",
+    "target_column": "koi_disposition",
+    "class_order": [
+      "CONFIRMED",
+      "CANDIDATE",
+      "FALSE POSITIVE"
+    ],
+    "random_seed": 245,
+    "test_scored": false
+  },
+  "results": {
+    "A_76_features_k3": {
+      "ARI": 0.03626857398241913,
+      "NMI": 0.08762201461637537,
+      "purity": 0.49844194553583526,
+      "majority_baseline": 0.49844194553583526,
+      "silhouette": 0.15515340599385963,
+      "cluster_sizes": [
+        1147,
+        1644,
+        4590
+      ],
+      "cluster_by_disposition_counts": {
+        "0": {
+          "CONFIRMED": 49,
+          "CANDIDATE": 513,
+          "FALSE POSITIVE": 585
+        },
+        "1": {
+          "CONFIRMED": 247,
+          "CANDIDATE": 214,
+          "FALSE POSITIVE": 1183
+        },
+        "2": {
+          "CONFIRMED": 1901,
+          "CANDIDATE": 778,
+          "FALSE POSITIVE": 1911
+        }
+      }
+    },
+    "A_76_features_k5": {
+      "ARI": 0.17152332808926699,
+      "NMI": 0.2174240841342813,
+      "purity": 0.6808020593415527,
+      "majority_baseline": 0.49844194553583526,
+      "silhouette": 0.08975267580947681,
+      "cluster_sizes": [
+        2000,
+        902,
+        2079,
+        997,
+        1403
+      ],
+      "cluster_by_disposition_counts": {
+        "0": {
+          "CONFIRMED": 1510,
+          "CANDIDATE": 326,
+          "FALSE POSITIVE": 164
+        },
+        "1": {
+          "CONFIRMED": 59,
+          "CANDIDATE": 152,
+          "FALSE POSITIVE": 691
+        },
+        "2": {
+          "CONFIRMED": 548,
+          "CANDIDATE": 524,
+          "FALSE POSITIVE": 1007
+        },
+        "3": {
+          "CONFIRMED": 25,
+          "CANDIDATE": 423,
+          "FALSE POSITIVE": 549
+        },
+        "4": {
+          "CONFIRMED": 55,
+          "CANDIDATE": 80,
+          "FALSE POSITIVE": 1268
+        }
+      }
+    },
+    "B_56_features_no_centroid_k3": {
+      "ARI": 0.0237555811371578,
+      "NMI": 0.0647040695616405,
+      "purity": 0.49844194553583526,
+      "majority_baseline": 0.49844194553583526,
+      "silhouette": 0.1862421069766637,
+      "cluster_sizes": [
+        1639,
+        1193,
+        4549
+      ],
+      "cluster_by_disposition_counts": {
+        "0": {
+          "CONFIRMED": 248,
+          "CANDIDATE": 228,
+          "FALSE POSITIVE": 1163
+        },
+        "1": {
+          "CONFIRMED": 109,
+          "CANDIDATE": 459,
+          "FALSE POSITIVE": 625
+        },
+        "2": {
+          "CONFIRMED": 1840,
+          "CANDIDATE": 818,
+          "FALSE POSITIVE": 1891
+        }
+      }
+    },
+    "B_56_features_no_centroid_k5": {
+      "ARI": 0.14001353056181595,
+      "NMI": 0.1712177876821815,
+      "purity": 0.6614279907871562,
+      "majority_baseline": 0.49844194553583526,
+      "silhouette": 0.13238654048146808,
+      "cluster_sizes": [
+        2873,
+        2039,
+        1203,
+        1051,
+        215
+      ],
+      "cluster_by_disposition_counts": {
+        "0": {
+          "CONFIRMED": 651,
+          "CANDIDATE": 517,
+          "FALSE POSITIVE": 1705
+        },
+        "1": {
+          "CONFIRMED": 1426,
+          "CANDIDATE": 390,
+          "FALSE POSITIVE": 223
+        },
+        "2": {
+          "CONFIRMED": 63,
+          "CANDIDATE": 153,
+          "FALSE POSITIVE": 987
+        },
+        "3": {
+          "CONFIRMED": 51,
+          "CANDIDATE": 417,
+          "FALSE POSITIVE": 583
+        },
+        "4": {
+          "CONFIRMED": 6,
+          "CANDIDATE": 28,
+          "FALSE POSITIVE": 181
+        }
+      }
+    }
+  }
+}
