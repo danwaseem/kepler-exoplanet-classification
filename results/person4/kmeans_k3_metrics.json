@@ -1,0 +1,17 @@
+{
+  "k": 3,
+  "preprocessing": "signed-log + standardized",
+  "n_init": 20,
+  "random_state": 245,
+  "ARI": 0.03626857398241913,
+  "NMI": 0.08762201461637537,
+  "silhouette_sample3000": 0.15515340599385963,
+  "purity": 0.49844194553583526,
+  "majority_class_baseline": 0.49844194553583526,
+  "cluster_sizes": [
+    1147,
+    1644,
+    4590
+  ],
+  "test_scored": false
+}

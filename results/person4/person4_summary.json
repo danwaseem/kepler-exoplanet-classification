@@ -1,0 +1,16 @@
+{
+  "pca_components_for_90pct": 25,
+  "pca_components_for_95pct": 33,
+  "pc1_pc2_variance": 0.2979207280025364,
+  "original_76_macro_f1": 0.7734686296455086,
+  "pca_25_macro_f1": 0.7664045416484381,
+  "pca_33_macro_f1": 0.7661289268509209,
+  "pca_2_macro_f1": 0.5703940187090721,
+  "best_pca": "PCA 25 components",
+  "best_pca_macro_f1": 0.7664045416484381,
+  "kmeans_k3_ARI": 0.03626857398241913,
+  "kmeans_k3_NMI": 0.08762201461637537,
+  "kmeans_k3_purity": 0.49844194553583526,
+  "kmeans_fold_stability_ARI_mean": 0.9397424576564261,
+  "test_scored": false
+}

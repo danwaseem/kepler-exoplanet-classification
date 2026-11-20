@@ -1,0 +1,14 @@
+{
+ "flags_k3_ARI": 0.041419155070688475,
+ "flags_k3_NMI": 0.10571485913612859,
+ "flags_k5_ARI": 0.1927666743401178,
+ "flags_k5_NMI": 0.23829217510077844,
+ "flags_only_k3_ARI": 0.016325922444019182,
+ "logreg_76+flags_macro_f1": 0.9007387700520757,
+ "flags+score_k3_ARI": 0.16170442259449228,
+ "flags+score_k3_NMI": 0.24015694669941334,
+ "flags+score_k5_ARI": 0.23987119752990904,
+ "flags+score_k5_NMI": 0.27826773341420424,
+ "flags+score_only_k3_ARI": 0.34764235571049124,
+ "logreg_76+flags+score_macro_f1": 0.9016841871206716
+}

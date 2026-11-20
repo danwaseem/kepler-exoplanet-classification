@@ -1,0 +1,44 @@
+{
+ "n_features": 56,
+ "PC1": 0.2133768298630297,
+ "PC2": 0.1473500755574075,
+ "k80": 11,
+ "k90": 17,
+ "k95": 23,
+ "top_PC1": [
+  "koi_gmag",
+  "koi_kepmag",
+  "koi_rmag",
+  "koi_srad",
+  "koi_insol_err2",
+  "koi_imag"
+ ],
+ "top_PC2": [
+  "koi_period",
+  "koi_sma",
+  "koi_dor",
+  "koi_dor_err1",
+  "koi_teq",
+  "koi_insol"
+ ],
+ "top_PC3": [
+  "koi_prad_err1",
+  "koi_prad",
+  "koi_depth_err1",
+  "koi_prad_err2",
+  "koi_ror",
+  "koi_depth"
+ ],
+ "logreg_orig56_macro_f1": 0.7305999674794411,
+ "logreg_orig56_sd": 0.01209372372702303,
+ "logreg_pca_k90_macro_f1": 0.7092467186894337,
+ "logreg_pca_k90_sd": 0.012917143607841013,
+ "rf_orig56_macro_f1": 0.7583687403303341,
+ "kmeans3_ARI": 0.0237555811371578,
+ "kmeans3_NMI": 0.0647040695616405,
+ "kmeans3_sizes": [
+  1639,
+  1193,
+  4549
+ ]
+}
