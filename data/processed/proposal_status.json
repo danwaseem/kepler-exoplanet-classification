@@ -1,16 +1,13 @@
 {
-  "status": "proposed",
-  "team_finalized": false,
+  "status": "approved",
+  "team_finalized": true,
   "prepared_by": "Danish Waseem",
-  "pending_agreement_from": [
-    "Sanjana Reddy Katham",
-    "Nathan Pak",
-    "Venkata Sai Bhavana Yarrapragada"
-  ],
+  "pending_agreement_from": [],
   "random_seed": 245,
-  "note": "Canonical split and feature list proposed for the team. Do not treat them as final until the other members agree. koi_fwm_stat_sig is excluded from the primary set and saved only in the experimental configuration. The 363 KOIs without transit depth are excluded from the primary experiment and retain their original split assignments for a later sensitivity experiment.",
+  "note": "Canonical split and feature list approved by all four members on 2026-11-20 (see approval_record). koi_fwm_stat_sig is excluded from the primary set and saved only in the experimental configuration. The 363 KOIs without transit depth are excluded from the primary experiment. The optional sensitivity experiment on them was dropped by team decision.",
   "primary_feature_count": 76,
   "fwm_stat_sig_in_primary": false,
   "incomplete_kois_retained_for_sensitivity": 363,
-  "permanently_discarded_incomplete_kois": false
+  "permanently_discarded_incomplete_kois": false,
+  "approval_record": "docs/shared/meeting_notes/2026-11-20_final_plan_approval.md"
 }
