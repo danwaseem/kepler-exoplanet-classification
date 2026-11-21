@@ -34,3 +34,6 @@ Intermediate Report Instructions.rtf
 *.swp
 .idea/
 .vscode/
+
+# Local AI output files (not part of the project)
+Claude outputs/
